@@ -1,0 +1,123 @@
+body {
+    background-image: url(https://unete.mentortm.com/images/home/fondo_LMS_Unete_sinLogo.jpg);
+    /* background-image: url(/images/home/fondo_LMS_Unete_sinLogo.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#miFormulario {
+    min-height: 75vh;
+    width: 375px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 4px 4px 5px #96989b;
+}
+
+.inputField {
+    margin: 0 auto 1.5rem;
+    width: 80%;
+    background-color: #f1f2f2;
+    height: 45px;
+}
+
+.inputField img {
+    width: auto;
+    height: 100%;
+    vertical-align: top;
+}
+
+.inputField input {
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.inputField input:focus-visible {
+    border: 1px solid #96989b;
+}
+
+.inputField input::placeholder,
+.inputField input::-moz-placeholder,
+.inputField input::-webkit-input-placeholder {
+    color: #96989b;
+}
+
+.loginBtn {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.loginBtn  input{
+    width: 100%;
+    background-color: #3d5ea3;
+    border: none;
+    color: #FFF;
+    padding: 0.25rem 0;
+    font-size: 20px;
+}
+
+.forgotPass {
+    width: 80%;
+    margin: 1rem auto 0px;
+    text-align: center;
+}
+
+.forgotPass a {
+    color: #96989b;
+    text-decoration: none;
+}
+
+.leyend {
+    width: 30%;
+    padding: .5rem;
+    align-self: flex-end;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #3d5ea3;
+    background-color: #FFFD;
+    border-radius: 15px;
+}
+
+.fancybox-custom .fancybox-skin {
+    box-shadow: 0 0 50px #222;
+}
+
+.failureLogin {
+    background-color: rgba(200,0,0,0.5);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+@media (max-width: 767.98px) {
+    main.container {
+        height: auto;
+        margin-top: 1.5rem;
+    }
+    
+    #miFormulario {
+        background-color: #FFFC;
+    }
+}
+
+@media (max-width: 575.98px) {
+    main.container {
+        flex-direction: column-reverse;
+    }
+
+
+    .leyend {
+        width: 100%;
+        margin-top: .5rem;
+    }
+}
