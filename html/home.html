@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/lightbox.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/unete.css" type="text/css" />
     <link rel="stylesheet" href="/css/RTE.css" type="text/css" />
+    <link rel="stylesheet" href="/css/nstyles.css" />
 
     <script type="text/javascript">
         if (typeof jQuery == 'undefined') { document.write("<script type='text/javascript' src='/scripts/MedixRepMagazine/js/jquery.min.js'><" + "/script>"); }
@@ -27,9 +28,12 @@
 
 
     <!-- CMABIOS PAPUS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
     <script type="text/javascript" src='/scripts/jquery-3.6.0.min.js'></script>
     <!-- Cambiar Noticas-->
     <script>
@@ -89,570 +93,116 @@
         })(jQuery);
     </script>
 
-    <div id="Wrapper">
-        <header>
-            <div class="row-fluid" style="background-color:#F1F2F2 !Important; max-height:101px !Important;">
-                <div class="pane span4"
-                    style="background-color:#F1F2F2 !Important;  max-height:100px !Important; text-align:center;">
-                    <a href="https://capacitacion.telcelinstitucional.com">
-                        <p>
-                            <img style="border-width:0px;" alt="Logo"
-                                src="https://unete.mentortm.com/images/home/unete.png" />
-                        </p>
-                    </a>
-                </div>
-                <div class="pane span8" style="background-color: white; max-height:101px !Important;">
-                    <div class="headerStyleTelcel">
-                        <div style="float: right; width: 30px; padding-top: 8px;">
+    <header class="headerStyleTelcel">
+        <!-- <div class="row-fluid" style="background-color:#F1F2F2 !Important; max-height:101px !Important;"> -->
+        <div class="d-flex">
+            <!-- <div class="pane span4"style="background-color:#F1F2F2 !Important;  max-height:100px !Important; text-align:center;"> -->
+            <div class="col-md-3">
+                <a href="https://capacitacion.telcelinstitucional.com">
+                    <p>
+                        <img alt="Logo" src="https://unete.mentortm.com/images/home/unete.png" />
+                    </p>
+                </a>
+            </div>
+            <!-- <div class="pane span8" style="background-color: white; max-height:101px !Important;"> -->
+            <div class="col-md-9">
+                <div class="item-users col-md-12">
+                    <div class="col-md-6">
+
+                        <form>
+                            <input type="text" name="searchField" id="searchFieldHome" class="inputTextClass" />
+                            <a href="javascript:searchToMentorHome();">
+                                <img src="https://unete.mentortm.com/images/home/searchBtnImageHome.jpg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </form>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div>
                             <p>
                                 <a href="https://devtelcelunete.mentortm.com/logOut.aspx">
                                     <img style="border-width:0px;" alt="Logo"
-                                        src="https://unete.mentortm.com/images/home/eject_16x16.png" />&nbsp;&nbsp;&nbsp;
+                                        src="https://unete.mentortm.com/images/home/eject_16x16.png" />
                                 </a>
                             </p>
                         </div>
-                        <div style="float: right; width: 30px; padding-top: 8px;">
+
+                        <div>
                             <p>
                                 <a href="https://devtelcelunete.mentortm.com">
                                     <img style="border-width:0px;" alt="Logo"
                                         src="https://unete.mentortm.com/images/home/cuentaIcon.png" />
-                                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </a>
                             </p>
                         </div>
-                        <div style="float: right; width: 80px; padding-top: 8px; font-size: 12px; text-align: right;"
-                            class="linkWhite">
+
+                        <div class="linkWhite">
                             <a href="http://devtelcelunete.mentortm.com">Mi cuenta</a>
-                            &nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
-                    <div>
-                        <div id="MenuH" style="width:82%;">
-                            <umbraco:macro id="MenuH" alias="BindNavigation" runat="server"></umbraco:macro>
-                        </div>
-                        <div style="padding-top: 0px; float: right; width:18%; height:45px;" class="hidden-phone">
-                            <p>
-                                <img style="border-width:0px;" alt="Logo"
-                                    src="https://unete.mentortm.com/images/home/telcelLogo.png" />
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!--
-<section id="ColorHeader">
-<nav>
-<div class="container">
-<div class="row-fluid">
-<div class="span9">
-
-</div>
-<div class="span3 hidden-phone">
-<div id="Search"><div id="SearchBar">
-<div class="searchBox">
-<input type="text" maxlength="1000">
-<input type="submit">
-</div>
-</div></div>
-</div>
-</div>
-</div>
-</nav>
-
-</section>
-
--->
-        <!---BindTuning HEADER End--->
-
-        <!---BindTuning CONTENT Start--->
-        <!--<div class="hidden-desktop hidden-tablet" style="width:100%; height:50px; position:fixed; background-color:black; bottom:0px; z-index:200;" id="promoPhone">
-						<div style="float:left; width:37%;"><p><umbraco:Macro Alias="logoMovilPatrocinador1" runat="server" /></p></div>
-						<div style="float:left; width:37%;"><p><umbraco:Macro Alias="logoMovilPatrocinador2" runat="server" /></p></div>
-						<div style="float:left; width:26%;"><p><umbraco:Macro Alias="logoMovilPatrocinador3" runat="server" /></p></div>
-					</div>-->
-
-        <div class="hidden-desktop hidden-tablet">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-        </div>
-        <div role="main" id="Main">
-            <div class="container">
-                <div id="ContentArea">
-                    <div class="row-fluid hidden-desktop hidden-tablet">
-                        <div class="pane span12">
-                            <div style="float: left; width: 100%; text-align:center; background-color:#003179;">
-                                <div>
-                                    <form style="margin:0px;">
-                                        <input type="text" name="searchField" id="searchField" class="inputTextClass"
-                                            width="90%"
-                                            style="font-size:10px; height: 12px; background-color:#CDCDCD;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:searchToMentor();">
-                                            <img src="https://unete.mentortm.com/images/home/searchBtnImage.jpg">
-                                        </a>
-                                    </form>
-                                </div>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com">
-                                    <img src="https://unete.mentortm.com/images/home/capacitacionBtnPhone.jpg"
-                                        border="0">
-                                </a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=0">
-                                    <img src="https://unete.mentortm.com/images/home/bibliotecaBtnPhone.jpg" border="0">
-                                </a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=56">
-                                    <img src="https://unete.mentortm.com/images/home/ventajasBtnPhone.jpg" border="0">
-                                </a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=53">
-                                    <img src="https://unete.mentortm.com/images/home/r2BtnPhone.jpg" border="0">
-                                    < /a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=54">
-                                    <img src="https://unete.mentortm.com/images/home/guiasBtnPhone.jpg" border="0">
-                                    < /a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=55">
-                                    <img src="https://unete.mentortm.com/images/home/promoBtnPhone.jpg" border="0">
-                                    < /a>
-                            </div>
-                            <div style="float: left; width: 100%; text-align:center;">
-                                <a href="/preguntas-frecuentes.aspx">
-                                    <img src="https://unete.mentortm.com/images/home/preguntasBtnPhone.jpg" border="0">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-fluid hidden-desktop hidden-tablet">
-                        <div class="pane span12">
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-
-
-
-                    <div class="row-fluid hidden-phone">
-                        <div class="pane span12">
-                            <div>
-                                <!-- inicio de botonera -->
-                                <!--<umbraco:Item field="imagenPostBlog" runat="server" xslt="umbraco.library:GetXmlNodeById({0})/ancestor-or-self::Patrocinadores/Section1"></umbraco:Item>-->
-                                <div style="float: left; width: 24%;">
-                                    <a href="https://devtelcelunete.mentortm.com">
-                                        <img src="https://unete.mentortm.com/images/home/capacitacionBtn.jpg"
-                                            border="0">
-                                    </a>
-                                </div>
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=0">
-                                        <img src="https://unete.mentortm.com/images/home/bibliotecaBtn.jpg" border="0">
-                                    </a>
-                                </div>
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=56">
-                                        <img src="https://unete.mentortm.com/images/home/ventajasBtn.jpg" border="0">
-                                    </a>
-                                </div>
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <div>
-                                        <form style="margin:0px;  text-align:right; background-color:#003179;">
-                                            <input type="text" name="searchField" id="searchFieldHome"
-                                                class="inputTextClass"
-                                                style="font-size:10px; height: 12px; background-color:#CDCDCD; width:60% !Important;">&nbsp;&nbsp;&nbsp;
-                                            <a href="javascript:searchToMentorHome();">
-                                                <img
-                                                    src="https://unete.mentortm.com/images/home/searchBtnImageHome.jpg">
-                                            </a>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="float: left; width: 100%; height:5px;">&nbsp;</div>
-                            </div>
-                            <div>
-                                <div style="float: left; width: 24%;">
-                                    <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=53">
-                                        <img src="https://unete.mentortm.com/images/home/r2Btn.jpg" border="0">
-                                    </a>
-                                </div>
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=54">
-                                        <img src="https://unete.mentortm.com/images/home/guiasBtn.jpg" border="0">
-                                    </a>
-                                </div>
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <a href="https://devtelcelunete.mentortm.com/UserM8/Main.aspx?CatID=55">
-                                        <img src="https://unete.mentortm.com/images/home/promoBtn.jpg" border="0">
-                                    </a>
-                                </div>
-
-                                <div style="float: left; width: 24%; margin-left: 1%;">
-                                    <a href="/preguntas-frecuentes.aspx">
-                                        <img src="https://unete.mentortm.com/images/home/preguntasBtn.jpg" border="0">
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="float: left; width: 100%; height:5px;">&nbsp;</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row-fluid">
-                        <div class="pane span7" style="">
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="row-fluid">
-                        <div class="pane span7">
-                            <asp:contentplaceholder id="L1_Zone60" runat="server" />
-                            <div id="HomeSlider">
-                                <div class="">
-                                    <asp:contentplaceholder id="HomeSliderZone" runat="server" />
-                                    <div id="myCarousel-1" class="carousel slide" data-ride="carousel">
-                                        <!-- Indicators -->
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#myCarousel-1" data-slide-to="0" class="active"></li>
-                                            <li data-target="#myCarousel-1" data-slide-to="1" class=""></li>
-                                            <li data-target="#myCarousel-1" data-slide-to="2" class=""></li>
-                                            <li data-target="#myCarousel-1" data-slide-to="3" class=""></li>
-                                            <li data-target="#myCarousel-1" data-slide-to="4" class=""></li>
-                                        </ol>
-
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active" style="text-align: center">
-                                                <a href='<umbraco:Item field="bannerLink1" textIfEmpty="#" runat="server" />'
-                                                    data-lightbox="carousel-1">
-                                                    <img src='<umbraco:Item field="bannerImage1" textIfEmpty="#" runat="server" />'
-                                                        alt="" border="0" style="margin:0 auto; width: 100%;">
-                                                </a>
-                                            </div>
-                                            <div class="item" style="text-align: center">
-                                                <a href='<umbraco:Item field="bannerLink2" textIfEmpty="#" runat="server" />'
-                                                    data-lightbox="carousel-2">
-                                                    <img src='<umbraco:Item field="bannerImage2" textIfEmpty="#" runat="server" />'
-                                                        alt="" border="0" style="margin:0 auto; width: 100%;">
-                                                </a>
-                                            </div>
-                                            <div class="item" style="text-align: center">
-                                                <a href='<umbraco:Item field="bannerLink3" textIfEmpty="#" runat="server" />'
-                                                    data-lightbox="carousel-3">
-                                                    <img src='<umbraco:Item field="bannerImage3" textIfEmpty="#" runat="server" />'
-                                                        alt="" border="0" style="margin:0 auto; width: 100%;">
-                                                </a>
-                                            </div>
-                                            <div class="item" style="text-align: center">
-                                                <a href='<umbraco:Item field="bannerLink4" textIfEmpty="#" runat="server" />'
-                                                    data-lightbox="carousel-4">
-                                                    <img src='<umbraco:Item field="bannerImage4" textIfEmpty="#" runat="server" />'
-                                                        alt="" border="0" style="margin:0 auto; width: 100%;">
-                                                </a>
-                                            </div>
-                                            <div class="item" style="text-align: center">
-                                                <a href='<umbraco:Item field="bannerLink5" textIfEmpty="#" runat="server" />'
-                                                    data-lightbox="carousel-5">
-                                                    <img src='<umbraco:Item field="bannerImage5" textIfEmpty="#" runat="server" />'
-                                                        alt="" border="0" style="margin:0 auto; width: 100%;">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Controls -->
-                                        <a class="left carousel-control" href="#myCarousel-1" data-slide="prev"></a>
-                                        <a class="right carousel-control" href="#myCarousel-1" data-slide="next"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin del bannner slider carrousel -->
-
-
-                            <div>
-                                <div style="float: left; width: 100%; height:5px;">&nbsp;</div>
-                            </div>
-
-
-
-
-                        </div>
-                        <div class="pane span5">
-                            <asp:contentplaceholder id="L1_Zone40" runat="server" />
-
-
-                            <!-- fin de botonera -->
-
-
-                            <div>
-                                <!-- inicio de cuadros de pestañas -->
-                                <div style="text-align: right;">
-                                    <div style="text-align: right;">
-                                        <div class="littlePestana" style="background-color: #103C68;">
-                                            <a href="javascript: newFeed(4);">
-                                                <span style="color: white; font-size: 12px; font-weight: bold;">Contacto
-                                                    &nbsp;</span>
-                                                <img src="/images/home/contactLogo.png" border="0" />
-                                            </a>
-                                        </div>
-                                        <div class="littlePestana" style="background-color: #F9932C;">
-                                            <a href="javascript: newFeed(1);">
-                                                <span style="color: white; font-size: 12px; font-weight: bold;">Noticias
-                                                    &nbsp;
-                                                </span>
-                                                <img src="/images/home/noticias.png" border="0" />
-                                            </a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div id="changeBoxContainer"
-                                    style="color: white; float:right; width:100%; text-align: center;">
-                                    <div id="yellowSquare" class="yellowBoxit">
-                                        <div id="newsDiv" style="display:none; ">
-                                            <p> </p>
-                                            <umbraco:Macro Alias="NoticiasFeedGeneral" runat="server" />
-                                        </div>
-                                        <!-- Contáctanos -->
-                                        <!--<span>SmtpServer="192.168.10.59" 
-																SmtpPort="25" 
-																SmtpMailFrom="unete@telcel.com" 
-																SmtpPassword="u85Pm3G7" 
-																SmtpUseSsl="0" 
-																SmtpNameFrom="Unete"
-
-																SmtpServer="pod51010.outlook.com" 
-																SmtpPort="587" 
-																SmtpMailFrom="mentortm@opentec.com.mx" 
-																SmtpPassword="0l4k453:)" 
-																SmtpUseSsl="1" 
-																SmtpNameFrom="Unete"
-																	
-													</span>-->
-                                        <div id="contactanosDiv" style="width: 100%; background-color: #063C69;"
-                                            class="yellowBoxit">
-                                            <div style="padding:10px;">
-                                                <umbraco:Macro SmtpServer="pod51010.outlook.com" SmtpPort="587"
-                                                    SmtpMailFrom="mentortm@opentec.com.mx" SmtpPassword="0l4k453:)"
-                                                    SmtpUseSsl="1" SmtpNameFrom="Unete" SmtpUsername="mentortm"
-                                                    SmtpUseAuthentication="1" Alias="mailing" runat="server">
-                                                </umbraco:Macro>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div> <!-- fin de cuadro de pestañas -->
-
-
-                        </div>
-                    </div>
-
-                    <div>
-                        <div style="float: left; width: 100%; height:50px;">&nbsp;</div>
-                    </div>
-
-
-                    <style>
-                        @media (min-width: 768px) and (max-width: 979px) {
-                            .espacio-patrocinador.small div:nth-child(1)>a>img {
-                                height: 30px;
-                            }
-
-                            .espacio-patrocinador.small div:nth-child(2)>p>a>img {
-                                height: 219px;
-                            }
-                        }
-
-                        @media (min-width: 980px) and (max-width: 1199px) {
-                            .espacio-patrocinador.small div:nth-child(1)>a>img {
-                                height: 40px;
-                            }
-
-                            .espacio-patrocinador.small div:nth-child(2)>p>a>img {
-                                height: 283px;
-                            }
-                        }
-
-                        @media (min-width: 1200px) {
-                            .espacio-patrocinador.small div:nth-child(1)>a>img {
-                                height: 40px;
-                            }
-
-                            .espacio-patrocinador.small div:nth-child(2)>p>a>img {
-                                height: 302px;
-                            }
-                        }
-                    </style>
-                    <umbraco:Item field="bodyText" runat="server" />
-                    <div class="row-fluid">
-                        <div class="pane span6">
-                            <asp:contentplaceholder id="L3_Zone50_1" runat="server" />
-                        </div>
-                        <div class="pane span6">
-                            <asp:contentplaceholder id="L3_Zone50_2" runat="server" />
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="pane span12">
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="pane span7">
-                            <asp:contentplaceholder id="L5_Zone40" runat="server" />
-                        </div>
-                        <div class="pane span5">
-                            <asp:contentplaceholder id="L5_Zone60" runat="server" />
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="pane span4">
-                            <asp:contentplaceholder id="L6_Zone30" runat="server" />
-                        </div>
-                        <div class="pane span8">
-                            <asp:contentplaceholder id="L6_Zone70" runat="server" />
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="pane span3">
-                            <asp:contentplaceholder id="L7_Zone30_1" runat="server" />
-                        </div>
-                        <div class="pane span6">
-                            <asp:contentplaceholder id="L7_Zone40_2" runat="server" />
-                        </div>
-                        <div class="pane span3">
-                            <asp:contentplaceholder id="L7_Zone30_3" runat="server" />
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="pane span12">
-                            <asp:contentplaceholder id="L8_Zone100" runat="server" />
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-
-                        </div>
-                    </div>
-
 
                 </div>
-            </div>
-        </div>
-        <!---BindTuning CONTENT End--->
-
-        <!---BindTuning FOOTER Start--->
-        <footer>
-            <div id="FooterWidgets" class="container">
-                <div class="row-fluid">
-                    <div class="pane span3">
-                        <asp:contentplaceholder id="F1_Zone25_1" runat="server" />
+                <div>
+                    <div id="MenuHs">
+                        <ul class="menu">
+                            <li class="blue1 sel">
+                                <a>
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="blue2">
+                                <a>
+                                    ¿Qué es UNETE?
+                                </a>
+                            </li>
+                            <li class="blue3">
+                                <a>
+                                    Misión
+                                </a>
+                            </li>
+                            <li class="blue4">
+                                <a>
+                                    Visión
+                                </a>
+                            </li>
+                            <li class="blue5">
+                                <a>
+                                    Mensaje de bienvenida
+                                </a>
+                            </li>
+                            <li class="blue1">
+                                <a>
+                                    Preguntas frecuentes
+                                </a>
+                            </li>
+                            <li class="blue2">
+                                <a>
+                                    Contacto
+                                </a>
+                            </li>
+                            <li>
+                                <p>
+                                    <img style="border-width:0px;" alt="Logo"
+                                        src="https://unete.mentortm.com/images/home/telcelLogo.png" />
+                                </p>
+                            </li>
+                        </ul>
+                        <!-- <umbraco:macro id="MenuH" alias="BindNavigation" runat="server"></umbraco:macro> -->
                     </div>
-                    <div class="pane span3">
-                        <asp:contentplaceholder id="F1_Zone25_2" runat="server" />
-                    </div>
-                    <div class="pane span3">
-                        <asp:contentplaceholder id="F1_Zone25_3" runat="server" />
-                    </div>
-                    <div class="pane span3">
-                        <asp:contentplaceholder id="F1_Zone25_4" runat="server" />
-                    </div>
-                </div>
-                <div class="row-fluid hidden-tablet hidden-desktop">
-
-                    <div class="pane span9" style="text-align: center;">
-
+                    <!-- <div style="padding-top: 0px; float: right; width:18%; height:45px;" class="hidden-phone">
                         <p>
-                            <a href="http://www.telcel.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoTel.png" border="0" />
-                            </a>
-                            <a href="http://deur.tuplan.mx" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoTuplan.png" border="0" />
-                            </a>
-                            <a href="http://mitelcel.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoMi.png" border="0" />
-                            </a>
-                            <a href="http://holatelcel.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoHola.png" border="0" />
-                            </a>
-                            <a href="http://clarovideo.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoVideo.png" border="0" />
-                            </a>
-                            <a href="images/home/Archivos/Manual.pdf" target="_blank">
-                                <img src="/images/home/logoClaro.png" border="0" />
-                            </a>
-                            <a href="http://aprende.org" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoApprende.png" border="0" />
-                            </a>
+                            <img style="border-width:0px;" alt="Logo"
+                                src="https://unete.mentortm.com/images/home/telcelLogo.png" />
                         </p>
-                        <p>&nbsp;</p>
-                    </div>
-                    <div class="pane span3" style="text-align:center;">
-                        <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" border="0" /></p>
-                        <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
+                    </div> -->
 
-                    </div>
                 </div>
-                <div class="row-fluid hidden-phone">
-                    <div class="pane span4">
-                        <asp:contentplaceholder id="F3_Zone50_1" runat="server" />
-                        <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" border="0" /></p>
-                        <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
-                        <p><a href="/1143">Aviso de Privacidad</a></p>
-                    </div>
-                    <div class="pane span8" style="text-align: right;">
-                        <p style="position: relative; top: -60px;">
-                            <a href="/media/27547/formato-solicitud-de-ingreso-caja-de-ahorro-servicios-contractuales.pdf"
-                                target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoTel.png" border="0" />
-                            </a>
-                            <a href="/media/27548/9efbd0d46bd76b29f354f1409d595be8-icono-de-nota-adhesiva-dibujada-a-mano.png"
-                                target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoTuplan.png" border="0" />
-                            </a>
-                            <a href="http://mitelcel.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoMi.png" border="0" />
-                            </a>
-                            <a href="http://holatelcel.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoHola.png" border="0" />
-                            </a>
-                            <a href="http://clarovideo.com" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoVideo.png" border="0" />
-                            </a>
-                            <a href="images/home/Archivos/Manual.pdf" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoClaro.png" border="0" />
-                            </a>
-                            <a href="http://aprende.org" target="_blank">
-                                <img src="https://unete.mentortm.com/images/home/logoApprende.png" border="0" />
-                            </a>
-
-
-                        </p>
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="pane span12">
-                        <asp:contentplaceholder id="F4_Zone100" runat="server" />
-                    </div>
-                </div>
-
             </div>
-    </div>
-    </footer>
-    </div>
+        </div>
+    </header>
+
 
     <script type="text/javascript">
         (function ($) {
