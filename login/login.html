@@ -8,137 +8,163 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <title>Login Unete</title>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
+    />
 
     <!-- JQuery -->
     <script type="text/javascript" src="/scripts/jquery-3.6.0.min.js"></script>
     <!-- Fancybox -->
-    <script src="/scripts/jquery.fancybox-2.1.5.js"></script>
-    <link rel="stylesheet" href="/css/jquery.fancybox-2.1.5.css">
+    <script
+      src="/scripts/jquery.fancybox-2.1.5.js"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/css/jquery.fancybox-2.1.5.css"
+      type="text/css"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
       crossorigin="anonymous"
+      type="text/javascript"
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
+      type="text/javascript"
     ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
+      type="text/css"
     />
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./login.css" type="text/css" />
 
     <script type="text/javascript">
-        if (typeof jQuery == 'undefined') { document.write("<script type='text/javascript' src='/scripts/MedixRepMagazine/js/jquery.min.js'><" + "/script>"); }
+      if (typeof jQuery == "undefined") {
+        document.write(
+          "<script type='text/javascript' src='/scripts/MedixRepMagazine/js/jquery.min.js'><" +
+            "/script>"
+        );
+      }
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.fancybox').fancybox();
-            $('.regexValid').blur(function () {
-                var _this = $(this);
-                //$(_this).val($(_this).val().replace(/[^\w]/g,''));
-            });
-            $("#miFormulario input[type='submit']").click(function (ev) {
-                if (grecaptcha.getResponse() == "") {
-                    ev.preventDefault();
-                    $("p.failureLogin").text("Valida el código Captcha antes de avanzar");
-                    $("p.failureLogin")[0].classList.add('p-2');
-                }
-            });
+      $(document).ready(function () {
+        $(".fancybox").fancybox();
+        $(".regexValid").blur(function () {
+          var _this = $(this);
+          //$(_this).val($(_this).val().replace(/[^\w]/g,''));
         });
-        function messageInactivo() {
-            $.fancybox.open({
-                href: 'https://unete.mentortm.com/images/home/inactividadMessage.jpg',
-                padding: 5
-            });
-        }
-        function messageNoExiste() {
-            $.fancybox.open({
-                href: 'https://unete.mentortm.com/images/home/noExisteMessage.jpg',
-                padding: 5
-            });
-        }
-        function messageCaducado(userNameParam) {
-            $.fancybox.open({
-                href: 'recoverpassword.aspx?userName=' + userNameParam,
-                type: 'iframe',
-                padding: 5
-            });
-        }
-
-
+        $("#miFormulario input[type='submit']").click(function (ev) {
+          if (grecaptcha.getResponse() == "") {
+            ev.preventDefault();
+            $("p.failureLogin").text(
+              "Valida el código Captcha antes de avanzar"
+            );
+            $("p.failureLogin")[0].classList.add("p-1");
+          }
+        });
+        checkLanguage();
+      });
+      function messageInactivo() {
+        $.fancybox.open({
+          href: "https://unete.mentortm.com/images/home/inactividadMessage.jpg",
+          padding: 5,
+        });
+      }
+      function messageNoExiste() {
+        $.fancybox.open({
+          href: "https://unete.mentortm.com/images/home/noExisteMessage.jpg",
+          padding: 5,
+        });
+      }
+      function messageCaducado(userNameParam) {
+        $.fancybox.open({
+          href: "recoverpassword.aspx?userName=" + userNameParam,
+          type: "iframe",
+          padding: 5,
+        });
+      }
     </script>
 
     <script type="text/javascript">
-        function checkLanguage() {
-            var userLang = navigator.language || navigator.userLanguage;
-            changeLanguage(userLang);
-        }
+      function checkLanguage() {
+        var userLang = navigator.language || navigator.userLanguage;
+        changeLanguage(userLang);
+      }
 
-        function changeLanguage(languageName) {
-            switch (languageName) {
-                case 'pt-br':
-                    $("#userName").html("Usuário:");
-                    $("#userName2").html("Usuário:");
-                    $("#passwordName").html("Senha:");
-                    $("#rememberMeName").html("lembrar senha");
-                    $("#forgotPassName").html("Esqueci minha senha");
-                    $("#indicationsMail").html("Se você esquecer sua senha fornece a seguinte informação para enviar seu e-mail");
-                    $("#emailtoSend").html("E-mail");
-                    $("#TryitAgain").html("Entrar tente novamente");
-                    $("#ContentPlaceHolderDefault_nuevoLoginportico_1_recoverMyPasswordButton").val("Envie informação");
-                    break;
-                case 'pt':
-                    $("#userName").html("Usuário:");
-                    $("#userName2").html("Usuário:");
-                    $("#passwordName").html("Senha:");
-                    $("#rememberMeName").html("lembrar senha");
-                    $("#forgotPassName").html("Esqueci minha senha");
-                    $("#indicationsMail").html("Se você esquecer sua senha fornece a seguinte informação para enviar seu e-mail");
-                    $("#emailtoSend").html("E-mail");
-                    $("#TryitAgain").html("Entrar tente novamente");
-                    $("#ContentPlaceHolderDefault_nuevoLoginportico_1_recoverMyPasswordButton").val("Envie informação");
-                    break;
-                default:
-                    $("#userName").html("Usuario:");
-                    $("#userName2").html("Usuario:");
-                    $("#passwordName").html("Constraseña:");
-                    $("#rememberMeName").html("Recuérdame");
-                    $("#forgotPassName").html("Olvidé mi contraseña");
-                    $("#indicationsMail").html("Si no recuerdas tu contraseña proporciona la siguiente información para enviarla a tu correo electrónico");
-                    $("#emailtoSend").html("E-mail");
-                    $("#TryitAgain").html("Intentar Login nuevamente");
-                    $("#ContentPlaceHolderDefault_nuevoLoginportico_1_recoverMyPasswordButton").val("Enviar datos");
-                    break;
-            }
+      function changeLanguage(languageName) {
+        switch (languageName) {
+          case "pt-br":
+            $(".userNameField").attr("placeholder", "Usuário:");
+            $(".passwordField").attr("placeholder", "Senha:");
+            $("#forgotPassName").html("Esqueci minha senha");
+            $("#indicationsMail").html(
+              "Se você esquecer sua senha fornece a seguinte informação para enviar seu e-mail"
+            );
+            $(".emailtoSend").html("E-mail");
+            $("#TryitAgain").html("Entrar tente novamente");
+            $(
+              ".sendRecoveryData"
+            ).val("Envie informação");
+            break;
+          case "pt":
+            $(".userNameField").attr("placeholder", "Usuário:");
+            $(".passwordField").attr("placeholder", "Senha:");
+            $("#forgotPassName").html("Esqueci minha senha");
+            $("#indicationsMail").html(
+              "Se você esquecer sua senha fornece a seguinte informação para enviar seu e-mail"
+            );
+            $(".emailtoSend").html("E-mail");
+            $("#TryitAgain").html("Entrar tente novamente");
+            $(
+              ".sendRecoveryData"
+            ).val("Envie informação");
+            break;
+          default:
+            $(".userNameField").attr("placeholder", "Usuario:");
+            $(".passwordField").attr("placeholder", "Constraseña:");
+            $("#forgotPassName").html("Olvidé mi contraseña");
+            $("#indicationsMail").html(
+              "Si no recuerdas tu contraseña proporciona la siguiente información para enviarla a tu correo electrónico"
+            );
+            $(".emailtoSend").attr("placeholder", "E-mail");
+            $("#TryitAgain").html("Intentar Login nuevamente");
+            $(
+              ".sendRecoveryData"
+            ).val("Enviar datos");
+            break;
         }
+      }
 
-        //$("#btnFrame").click(function(){});
-        function OpenFramePassword() {
-            $("#frameContrasena").css("visibility", "visible");
+      //$("#btnFrame").click(function(){});
+      function OpenFramePassword() {
+        $("#frameContrasena").css("visibility", "visible");
+      }
+
+      function getMyPassword() {
+        divHidden = document.getElementById("DivGetPassword");
+        divToHide = document.getElementById("formularioDiv");
+        if (divHidden.classList.contains("d-block")) {
+          divHidden.classList.replace("d-block", "d-none");
+          divToHide.classList.replace("d-none", "d-block");
+        } else {
+          divHidden.classList.replace("d-none", "d-block");
+          divToHide.classList.replace("d-block", "d-none");
         }
-
-        function getMyPassword() {
-            divHidden = document.getElementById("DivGetPassword");
-            divToHide = document.getElementById("formularioDiv");
-            if (divHidden.style.display == 'block') {
-                divHidden.style.display = 'none';
-                divToHide.style.display = 'block';
-            }
-            else {
-                divHidden.style.display = 'block';
-                divToHide.style.display = 'none';
-            }
-
-        }
+      }
     </script>
   </head>
   <body>
@@ -150,51 +176,95 @@
       </p>
       <div class="formContainer">
         <form id="miFormulario" runat="server">
-          <img
-            class="img-fluid"
-            src="https://unete.mentortm.com/images/home/logo_unete.png"
-            alt="Logo Unete"
-          />
-          <p class="failureLogin"></p>
-          <p class="inputField">
+          <div id="formularioDiv" class="d-block">
             <img
-            src="https://unete.mentortm.com/images/home/iconoUsu.png"
-              alt=""
+              class="img-fluid"
+              src="https://unete.mentortm.com/images/home/logo_unete.png"
+              alt="Logo Unete"
             />
-            <input
-              type="text"
-              name="ctl00$ctl00$ContentPlaceHolderDefault$PruebasLoginTelcel_1$UserName"
-              id="ContentPlaceHolderDefault_PruebasLoginTelcel_1_UserName"
-              placeholder="Nombre de usuario"
-            />
-          </p>
-          <p class="inputField">
-            <img
-              src="https://unete.mentortm.com/images/home/iconPass.png"
-              alt=""
-            />
-            <input
-            name="ctl00$ctl00$ContentPlaceHolderDefault$PruebasLoginTelcel_1$Password"
-              type="password"
-              id="ContentPlaceHolderDefault_PruebasLoginTelcel_1_Password"
-              placeholder="Contraseña"
-            />
-          </p>
+            <p class="failureLogin"></p>
+            <p class="inputField">
+              <i class="fas fa-user col-2"></i>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Usuario"
+                class="col regexValid userNameField"
+              />
+            </p>
+            <p class="inputField">
+              <i class="fas fa-lock col-2"></i>
+              <input
+                name=""
+                type="password"
+                id=""
+                placeholder="Contraseña"
+                class="col regexValid passwordField"
+              />
+            </p>
 
-          <div
-            class="g-recaptcha"
-            data-sitekey="6Lcqv1kaAAAAAPIh-cmurme3Gxu7jsApoUmHDYML"
-          ></div>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lcqv1kaAAAAAPIh-cmurme3Gxu7jsApoUmHDYML"
+            ></div>
 
-          <p class="loginBtn">
+            <p class="loginBtn">
               <input type="submit" name="" value="Entrar" id="" />
-          </p>
+            </p>
 
-          <p class="forgotPass">
-            <a href="javascript:getMyPassword();">
-              <span id="forgotPassName">Olvidé mi contraseña</span>
-            </a>
-          </p>
+            <p class="forgotPass">
+              <a href="javascript:getMyPassword();">
+                <span id="forgotPassName">Olvidé mi contraseña</span>
+              </a>
+            </p>
+          </div>
+          <div id="DivGetPassword" class="d-none">
+            <img
+              class="img-fluid"
+              src="https://unete.mentortm.com/images/home/logo_unete.png"
+              alt="Logo Unete"
+            />
+            <p id="indicationsMail" class="p-2">
+              Si no recuerdas tu contraseña proporciona la siguiente información
+              para enviarla a tu correo electrónico
+            </p>
+            <p class="inputField">
+              <i class="fas fa-user col-2"></i>
+              <input
+                name=""
+                type="text"
+                id=""
+                placeholder="Usuario"
+                class="col regexValid userNameField"
+              />
+            </p>
+            <p class="inputField">
+              <i class="fas fa-envelope col-2"></i>
+              <input
+                name=""
+                type="text"
+                id=""
+                placeholder="E-mail"
+                class="col emailtoSend"
+              />
+            </p>
+            <p class="loginBtn">
+              <input
+                type="submit"
+                name=""
+                value="Enviar datos"
+                onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ContentPlaceHolderDefault$PruebasLoginTelcel_1$recoverMyPasswordButton", "", true, "", "", false, false))'
+                id=""
+                class="sendRecoveryData"
+              />
+            </p>
+            <p class="forgotPass">
+              <a href="javascript:getMyPassword();">
+                <span id="TryitAgain">Intentar Login nuevamente</span>
+              </a>
+            </p>
+          </div>
         </form>
         <p class="mx-auto mb-md-0 mt-4 w-50">
           <img
@@ -209,9 +279,67 @@
     function showErrorMessage(mes) {
       console.log("_" + mes);
     }
-    </script>
-    <script type="text/javascript">
-        var nVer = navigator.appVersion; var nAgt = navigator.userAgent; var bN = navigator.appName; var fullV = "" + parseFloat(navigator.appVersion); var majorV = parseInt(navigator.appVersion, 10); var nameOffset, verOffset, ix; if ((verOffset = nAgt.indexOf("Opera")) !== -1) { bN = "Opera"; fullV = nAgt.substring(verOffset + 6); if ((verOffset = nAgt.indexOf("Version")) !== -1) { fullV = nAgt.substring(verOffset + 8) } } else { if ((verOffset = nAgt.indexOf("MSIE")) !== -1) { bN = "IE"; fullV = nAgt.substring(verOffset + 5) } else { if ((verOffset = nAgt.indexOf("Chrome")) !== -1) { bN = "Chrome"; fullV = nAgt.substring(verOffset + 7) } else { if ((verOffset = nAgt.indexOf("Safari")) !== -1) { bN = "Safari"; fullV = nAgt.substring(verOffset + 7); if ((verOffset = nAgt.indexOf("Version")) !== -1) { fullV = nAgt.substring(verOffset + 8) } } else { if ((verOffset = nAgt.indexOf("Firefox")) !== -1) { bN = "Firefox"; fullV = nAgt.substring(verOffset + 8) } else { if ((nameOffset = nAgt.lastIndexOf(" ") + 1) < (verOffset = nAgt.lastIndexOf("/"))) { bN = nAgt.substring(nameOffset, verOffset); fullV = nAgt.substring(verOffset + 1); if (bN.toLowerCase() == bN.toUpperCase()) { bN = navigator.appName } } } } } } } if ((ix = fullV.indexOf(";")) !== -1) { fullV = fullV.substring(0, ix) } if ((ix = fullV.indexOf(" ")) !== -1) { fullV = fullV.substring(0, ix) } majorV = parseInt("" + fullV, 10); if (isNaN(majorV)) { fullV = "" + parseFloat(navigator.appVersion); majorV = parseInt(navigator.appVersion, 10) }
-        document.getElementsByTagName("body")[0].classList += " " + bN + " " + bN + majorV + " cmsUMB cmsUMB4_5";
-    </script>
+  </script>
+  <script type="text/javascript">
+    var nVer = navigator.appVersion;
+    var nAgt = navigator.userAgent;
+    var bN = navigator.appName;
+    var fullV = "" + parseFloat(navigator.appVersion);
+    var majorV = parseInt(navigator.appVersion, 10);
+    var nameOffset, verOffset, ix;
+    if ((verOffset = nAgt.indexOf("Opera")) !== -1) {
+      bN = "Opera";
+      fullV = nAgt.substring(verOffset + 6);
+      if ((verOffset = nAgt.indexOf("Version")) !== -1) {
+        fullV = nAgt.substring(verOffset + 8);
+      }
+    } else {
+      if ((verOffset = nAgt.indexOf("MSIE")) !== -1) {
+        bN = "IE";
+        fullV = nAgt.substring(verOffset + 5);
+      } else {
+        if ((verOffset = nAgt.indexOf("Chrome")) !== -1) {
+          bN = "Chrome";
+          fullV = nAgt.substring(verOffset + 7);
+        } else {
+          if ((verOffset = nAgt.indexOf("Safari")) !== -1) {
+            bN = "Safari";
+            fullV = nAgt.substring(verOffset + 7);
+            if ((verOffset = nAgt.indexOf("Version")) !== -1) {
+              fullV = nAgt.substring(verOffset + 8);
+            }
+          } else {
+            if ((verOffset = nAgt.indexOf("Firefox")) !== -1) {
+              bN = "Firefox";
+              fullV = nAgt.substring(verOffset + 8);
+            } else {
+              if (
+                (nameOffset = nAgt.lastIndexOf(" ") + 1) <
+                (verOffset = nAgt.lastIndexOf("/"))
+              ) {
+                bN = nAgt.substring(nameOffset, verOffset);
+                fullV = nAgt.substring(verOffset + 1);
+                if (bN.toLowerCase() == bN.toUpperCase()) {
+                  bN = navigator.appName;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    if ((ix = fullV.indexOf(";")) !== -1) {
+      fullV = fullV.substring(0, ix);
+    }
+    if ((ix = fullV.indexOf(" ")) !== -1) {
+      fullV = fullV.substring(0, ix);
+    }
+    majorV = parseInt("" + fullV, 10);
+    if (isNaN(majorV)) {
+      fullV = "" + parseFloat(navigator.appVersion);
+      majorV = parseInt(navigator.appVersion, 10);
+    }
+    document.getElementsByTagName("body")[0].classList +=
+      " " + bN + " " + bN + majorV + " cmsUMB cmsUMB4_5";
+  </script>
 </html>

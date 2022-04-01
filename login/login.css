@@ -18,6 +18,7 @@ main.container {
     border-radius: 50px;
     background-color: #fff;
     box-shadow: 4px 4px 5px #96989b;
+    padding-bottom: .75rem;
 }
 
 .inputField {
@@ -25,12 +26,14 @@ main.container {
     width: 80%;
     background-color: #f1f2f2;
     height: 45px;
+    display: flex;
 }
 
-.inputField img {
-    width: auto;
-    height: 100%;
-    vertical-align: top;
+.inputField i {
+    text-align: center;
+    color: #96989b;
+    padding: .75rem;
+    font-size: 1.5em;
 }
 
 .inputField input {
@@ -90,14 +93,23 @@ main.container {
     box-shadow: 0 0 50px #222;
 }
 
-.failureLogin {
-    background-color: rgba(200,0,0,0.5);
+.failureLogin,
+#indicationsMail {
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
     width: 80%;
     margin: 0 auto 1rem;
 }
+
+.failureLogin {
+    background-color: rgba(200,0,0,0.5);
+}
+
+#indicationsMail {
+    background-color: rgba(43,79,168,.5);
+}
+
 
 @media (max-width: 767.98px) {
     main.container {
@@ -115,9 +127,19 @@ main.container {
         flex-direction: column-reverse;
     }
 
+    #miFormulario {
+        width: 95vw;
+    }
 
     .leyend {
         width: 100%;
         margin-top: .5rem;
+    }
+}
+
+@media only screen and (max-width: 767.98px) and (orientation: landscape) { 
+    .leyend {
+        font-size: 10px;
+        align-self: flex-start;
     }
 }
