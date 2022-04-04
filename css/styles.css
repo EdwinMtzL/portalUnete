@@ -1,0 +1,60 @@
+.infoCard {
+    margin-top: 1rem;   
+}
+
+.infoCard__title {
+    background-color: #8faadc;
+    border-radius: 15px;
+    position: relative;
+    padding: 0.5rem 1rem 0.75rem 1rem;
+    box-shadow: 5px 2px 3px #aaa;
+}
+
+.infoCard__h1 {
+    margin-bottom: 0;
+    color: #FFF;
+    border-left: 4px solid #FFF;
+    padding-left: 1rem;
+}
+
+.hexagonBorder {
+    position: absolute;
+    right: -49px;
+    top: -10px;
+    background-color: #5b9bd5;
+    height: 88px;
+    width: 98px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    box-shadow: 5px 2px 3px #aaa;
+}
+
+.hexagon {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background-color: #FFF;
+    height: 82px;
+    width: 92px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hexagon__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infoCard__content {    
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-top: none;
+    border-radius: 0 0 3rem 3rem;
+    box-shadow: 0px 3px 5px #888;
+}
+
+@media (max-width: 575.98px) {
+    .hexagonBorder {
+        display: none;
+    }
+}
