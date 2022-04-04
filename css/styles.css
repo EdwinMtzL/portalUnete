@@ -1,5 +1,10 @@
+:root {
+    --nine-gray: #999;
+}
+
 .infoCard {
-    margin-top: 1rem;   
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .infoCard__title {
@@ -7,7 +12,7 @@
     border-radius: 15px;
     position: relative;
     padding: 0.5rem 1rem 0.75rem 1rem;
-    box-shadow: 5px 2px 3px #aaa;
+    box-shadow: 5px 2px 3px var(--nine-gray);
 }
 
 .infoCard__h1 {
@@ -25,7 +30,7 @@
     height: 88px;
     width: 98px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    box-shadow: 5px 2px 3px #aaa;
+    box-shadow: 5px 2px 3px var(--nine-gray);
 }
 
 .hexagon {
@@ -50,11 +55,84 @@
     padding: 1rem 2rem;
     border-top: none;
     border-radius: 0 0 3rem 3rem;
-    box-shadow: 0px 3px 5px #888;
+    box-shadow: 0px 3px 5px var(--nine-gray);
+}
+
+.infoCard__label {
+    min-width: 15%;
+    color: var(--nine-gray);
+}
+
+.infoCard__input,
+.infoCard__input--textarea {
+    height: 32px;
+    width: 300px;
+    padding-left: .5rem;
+    border-radius: 6px;
+    border: 1px solid #AAA;
+    box-shadow: 1px 3px 3px var(--nine-gray);
+}
+
+.infoCard__input:focus-visible,
+.infoCard__input--textarea:focus-visible {
+    outline: none;
+}
+
+
+.selectDiv {
+    position: relative;
+    display: inline;
+}
+
+.selectDiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+}
+
+.selectDiv i {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: #8faadc;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 6px;
+    right: 0px;
+    z-index: -1;
+}
+
+.infoCard__input--textarea {
+    height: 64px;
+}
+
+.contactBtn {
+    padding: .15rem 2rem;
+    color: #FFF;
+    font-size: 20px;
+    background-color: #8faadc;
+    border: none;
+    border-radius: 6px;
+    margin: 1rem auto;
+    transition: background-color .3s ease;
+}
+
+.contactBtn:hover {
+    background-color: #5b9bd5;
 }
 
 @media (max-width: 575.98px) {
     .hexagonBorder {
         display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .infoCard__input,
+    .infoCard__input--textarea {
+        width: 100%;
     }
 }
