@@ -91,35 +91,35 @@
         })(jQuery);
     </script>
 
-    <header class="headerStyleTelcel">
-        <!-- <div class="row-fluid" style="background-color:#F1F2F2 !Important; max-height:101px !Important;"> -->
-        <div class="d-flex">
-            <!-- <div class="pane span4"style="background-color:#F1F2F2 !Important;  max-height:100px !Important; text-align:center;"> -->
-            <div class="col-md-3">
+    <header>
+        <div class="header-item">
+            <div class="col-md-3 col-sm-12 image-client">
                 <a href="https://capacitacion.telcelinstitucional.com">
-                    <img alt="Logo" src="https://unete.mentortm.com/images/home/unete.png" />
+                    <img alt="Logo" src="https://unete.mentortm.com/images/home/unete.png"  class="img-fluid"/>
                 </a>
             </div>
-            <!-- <div class="pane span8" style="background-color: white; max-height:101px !Important;"> -->
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-12 item-sub">
                 <div class="item-users col-md-12">
-                    <div class="col-md-6">
-                        <form class="d-flex">
+                    <div class="col-md-8 col-sm-12">
+                        <form class="d-flex mt-2 mb-2">
                             <input type="text" name="searchField" id="searchFieldHome"
-                                class="inputTextClass form-control me-2" />
-                            <a href="javascript:searchToMentorHome();">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
+                                class="inputTextClass form-control me-2" placeholder="Búscar" aria-label="Search"/>
+                            <!-- <a href="javascript:searchToMentorHome();"> -->
+                                <button class="btn btn-outline-success" onclick="`javascript:searchToMentorHome();`" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                            <!-- </a> -->
                         </form>
                     </div>
 
-                    <div class="col-md-6 d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-12 d-flex justify-content-center">
                         <div class="linkWhite m-2">
                             <a href="http://devtelcelunete.mentortm.com">Mi cuenta</a>
                         </div>
                         <div class="m-2">
                             <a href="https://devtelcelunete.mentortm.com">
-                                <i class="fa-solid fa-user-large"></i>
+                                <i class="fa-solid fa-circle-user fa-2x"></i>
                             </a>
                         </div>
 
@@ -137,133 +137,144 @@
                             </ul>
                         </div>
 
+                        <div class="menu-hidden" onclick="hiddenMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
 
                     </div>
                 </div>
-                <div class="col-">
+                <div class="col-md-12 item-nav">
                     <div class="list-group" id="list-tab" role="tablist" id="MenuHs">
                         <a class="blue1 list-group-item list-group-item-action active" id="list-home-list"
-                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-                        <a class="blue2 list-group-item list-group-item-action" id="list-profile-list"
-                            data-bs-toggle="list" href="#list-profile" role="tab"
-                            aria-controls="list-profile">Profile</a>
-                        <a class="blue3 list-group-item list-group-item-action" id="list-messages-list"
-                            data-bs-toggle="list" href="#list-messages" role="tab"
-                            aria-controls="list-messages">Messages</a>
-                        <a class="blue4 list-group-item list-group-item-action" id="list-settings-list"
-                            data-bs-toggle="list" href="#list-settings" role="tab"
-                            aria-controls="list-settings">Settings</a>
+                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Inicio
+                        </a>
+                        <a class="blue2 list-group-item list-group-item-action" id="list-unete-list"
+                            data-bs-toggle="list" href="#list-unete" role="tab" aria-controls="list-unete">¿Qué es
+                            UNETE?
+                        </a>
+                        <a class="blue3 list-group-item list-group-item-action" id="list-mision-list"
+                            data-bs-toggle="list" href="#list-mision" role="tab" aria-controls="list-mision">Misión
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-vision-list"
+                            data-bs-toggle="list" href="#list-vision" role="tab" aria-controls="list-vision">Visión
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-message-list"
+                            data-bs-toggle="list" href="#list-message" role="tab" aria-controls="list-message">Mensaje
+                            de bienvenida
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-question-list"
+                            data-bs-toggle="list" href="#list-question" role="tab"
+                            aria-controls="list-question">Preguntas frecuentes
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-contacto-list"
+                            data-bs-toggle="list" href="#list-contacto" role="tab" aria-controls="list-contac">Contacto
+                        </a>
+                        <!-- <a class="image-telcel"> -->
+                            <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogo.png" class="image-telcel"/>
+                        <!-- </a> -->
                     </div>
                 </div>
-                <!-- <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb" id="MenuHs">
-                    <ol class="breadcrumb menu">
-                        <li class="blue1 sel active">
-                            <a>
-                                Inicio
-                            </a>
-                        </li>
-                        <li class="blue2">
-                            <a>
-                                ¿Qué es UNETE?
-                            </a>
-                        </li>
-                        <li class="blue3">
-                            <a>
-                                Misión
-                            </a>
-                        </li>
-                        <li class="blue4">
-                            <a>
-                                Visión
-                            </a>
-                        </li>
-                        <li class="blue5">
-                            <a>
-                                Mensaje de bienvenida
-                            </a>
-                        </li>
-                        <li class="blue1">
-                            <a>
-                                Preguntas frecuentes
-                            </a>
-                        </li>
-                        <li class="blue2">
-                            <a>
-                                Contacto
-                            </a>
-                        </li>
-                        <li>
-                            <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogo.png" />
-                        </li>
-                    </ol>
-                </nav> -->
-                <div class="row">
-                    <div class="col-8">
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-home" role="tabpanel"
-                                aria-labelledby="list-home-list">Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also the leap into
-                                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </div>
-                            <div class="tab-pane fade" id="list-profile" role="tabpanel"
-                                aria-labelledby="list-profile-list">
-                                <div class="infoCard">
-                                    <div class="infoCard__title">
-                                        <h1 class="infoCard__h1">¿Qué es UNETE?</h1>
-                                        <div class="hexagonBorder">
-                                            <div class="hexagon">
-                                                <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
-                                                    alt="" class="hexagon__img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="infoCard__content row">
-                                        <div class="infoCard__image col-md-4">
-                                            <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
-                                                alt="" class="img-fluid">
-                                        </div>
-                                        <div class="infoCard__data col-md-8">
-                                            <p>UNIVERSIDAD ELECTRÓNICA TELCEL, es un espacio creado para tí, donde
-                                                podrás desarrollar tus
-                                                conocimienos sobre la oferta de Telcel, desde la comodidad de tu lugar
-                                                de trbajo, tu hogar o
-                                                desde tu dispositivo móvil.</p>
-                                            <p>Tú decides en qué momento y el tiempo que le dediques a tu formación, ya
-                                                que tendrás a tu
-                                                disposición cursos de actualización, material de comunicación y lo más
-                                                importante es que podrás
-                                                obtener tu Certificación que te ayudará a sobresalir en tu labor
-                                                ordinaria y destacar entre tus
-                                                compañeros.</p>
-                                            <p><strong>¡Unete a esta iniciativa de Telcel, creada y pensada para
-                                                    tí!</strong></p>
-                                        </div>
-                                    </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                    aria-labelledby="list-home-list">
+                </div>
+                <div class="tab-pane fade" id="list-unete" role="tabpanel"
+                    aria-labelledby="list-unete-list">
+                    <div class="infoCard">
+                        <div class="infoCard__title">
+                            <h1 class="infoCard__h1">¿Qué es UNETE?</h1>
+                            <div class="hexagonBorder">
+                                <div class="hexagon">
+                                    <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
+                                        alt="" class="hexagon__img">
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="list-messages" role="tabpanel"
-                                aria-labelledby="list-messages-list">s</div>
-                            <div class="tab-pane fade" id="list-settings" role="tabpanel"
-                                aria-labelledby="list-settings-list">There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered alteration in some form, by injected
-                                humour, or randomised words which don't look even slightly believable. If you are going
-                                to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
-                                hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to
-                                repeat predefined chunks</div>
+                        </div>
+                        <div class="infoCard__content row">
+                            <div class="infoCard__image col-md-4">
+                                <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="infoCard__data col-md-8">
+                                <p>UNIVERSIDAD ELECTRÓNICA TELCEL, es un espacio creado para tí, donde
+                                    podrás desarrollar tus
+                                    conocimienos sobre la oferta de Telcel, desde la comodidad de tu lugar
+                                    de trbajo, tu hogar o
+                                    desde tu dispositivo móvil.</p>
+                                <p>Tú decides en qué momento y el tiempo que le dediques a tu formación, ya
+                                    que tendrás a tu
+                                    disposición cursos de actualización, material de comunicación y lo más
+                                    importante es que podrás
+                                    obtener tu Certificación que te ayudará a sobresalir en tu labor
+                                    ordinaria y destacar entre tus
+                                    compañeros.</p>
+                                <p><strong>¡Unete a esta iniciativa de Telcel, creada y pensada para
+                                        tí!</strong></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                    aria-labelledby="list-messages-list">s</div>
 
 
+                <div class="tab-pane fade" id="list-contacto" role="tabpanel" aria-labelledby="list-contacto-list">
+                    <div class="infoCard">
+                        <div class="infoCard__title">
+                            <h1 class="infoCard__h1">Contacto</h1>
+                            <div class="hexagonBorder">
+                                <div class="hexagon">
+                                    <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
+                                        alt="" class="hexagon__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infoCard__content row justify-content-between">
+                            <div class="infoCard__image col-sm-8 col-md-4 mx-auto mx-md-0">
+                                <img src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?cs=srgb&dl=pexels-daniel-nettesheim-1162361.jpg&fm=jpg"
+                                    alt="" class="img-fluid" />
+                            </div>
+                            <div class="infoCard__data col-md-6">
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label for="name" class="infoCard__label">Nombre</label>
+                                        <input type="text" name="name" id="" class="infoCard__input" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="infoCard__label"> Correo </label>
+                                        <input type="email" name="email" id="" class="infoCard__input" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="region" class="infoCard__label"> Región </label>
+                                        <div class="selectDiv">
+                                            <select name="region" id="" class="infoCard__input">
+                                                <option value="Mexico">México</option>
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="comments" class="infoCard__label align-top">
+                                            Comentario
+                                        </label>
+                                        <textarea name="comments" id="" cols="30" rows="10"
+                                            class="infoCard__input--textarea"></textarea>
+                                    </div>
+                                    <input type="submit" value="Enviar" class="contactBtn" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-    </header>
-
+    </div>
 
     <!-- <script type="text/javascript">
         (function ($) {
@@ -326,6 +337,20 @@ alert(scroll_top);
     <!-- <script src="/scripts/lightbox.min.js"></script> -->
 
     <!-- powered by BIND TUNING 2013 // http://www.bindtuning.com -->
+
+    <script >
+        const hiddenMenu = ()=>{
+
+            let menuStatus = document.querySelector('.item-nav');
+
+            if($('.item-nav').css('display') === 'none' ){
+                menuStatus.style.display = 'block'
+            }else{
+                menuStatus.style.display = 'none'
+            }
+
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

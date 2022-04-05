@@ -1,94 +1,46 @@
-.item-users{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.menu{
+.menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-#MenuHs .menu>li:hover>a, #MenuHs .menu>li:hover>span, #MenuHs .menu>li.sel>a, #MenuHs .menu>li.sel>span
-{
-    color: white;
+/* #MenuHs .menu > li:hover > a,
+#MenuHs .menu > li:hover > span,
+#MenuHs .menu > li.sel > a,
+#MenuHs .menu > li.sel > span {
+    color: #f5f5f5;
     font-size: 14px;
-    opacity: 1.0;
+    opacity: 1;
     padding: 12px 15px 12px;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
-    text-transform: uppercase;
-    background: #FFAC28;
+    background: #ffac28;
 }
 
-#MenuHs .menu>li>a, #MenuHs .menu>li>span {
-    color: white;
+#MenuHs .menu > li > a,
+#MenuHs .menu > li > span {
+    color: #f5f5f5;
     font-size: 14px;
-    opacity: .8;
+    opacity: 0.8;
     padding: 12px 15px 12px;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
     text-transform: uppercase;
-    transition: .2s background-image;
+    transition: 0.2s background-image;
 }
-#MenuHs ul.menu, #MenuHs li, #MenuHs li a, #MenuHs li span {
+#MenuHs ul.menu,
+#MenuHs li,
+#MenuHs li a,
+#MenuHs li span {
     display: inline-block;
-}
-.headerStyleTelcel{
-    height: 65px !important;
-}
-
-
-.fa-solid.fa-gear{
-    color: #f5f5f5;
-}
-
-button#dropdownMenuButton1 {
-    background: transparent;
-    border: none;
-}
-
-.blue1 {
-	background-color: #89a9e7 !important;
-}
-.blue2 {
-	background-color: #4483cb !important;
-}
-.blue3 {
-	background-color: #0072bf !important;
-}
-.blue4 {
-	background-color: #105ea9 !important;
-}
-.blue5 {
-	background-color: #003179 !important;
-}
-
-.list-group-item.list-group-item-action.active{
-    color: #f5f5f5;
-    text-transform: uppercase;
-    background-color: #FFAC28 !important;
-}
-
-.headerStyleTelcel {
-	background-color: #003179;
-	border-bottom: 5px solid #89a9e7;
-	padding-top: 5px;
-	padding-right: 10px;
-	color: white;
-	height: 46px !important;
-	width: 100%;
-}
-
-
+} */
 
 :root {
     --nine-gray: #999;
 }
 
 .infoCard {
-    margin-top: 1rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -102,8 +54,8 @@ button#dropdownMenuButton1 {
 
 .infoCard__h1 {
     margin-bottom: 0;
-    color: #FFF;
-    border-left: 4px solid #FFF;
+    color: #fff;
+    border-left: 4px solid #fff;
     padding-left: 1rem;
 }
 
@@ -122,7 +74,7 @@ button#dropdownMenuButton1 {
     position: absolute;
     right: 3px;
     top: 3px;
-    background-color: #FFF;
+    background-color: #fff;
     height: 82px;
     width: 92px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
@@ -134,7 +86,7 @@ button#dropdownMenuButton1 {
     object-fit: cover;
 }
 
-.infoCard__content {    
+.infoCard__content {
     width: calc(100% - 2rem);
     margin: 0 auto;
     padding: 1rem 2rem;
@@ -152,9 +104,9 @@ button#dropdownMenuButton1 {
 .infoCard__input--textarea {
     height: 32px;
     width: 300px;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     border-radius: 6px;
-    border: 1px solid #AAA;
+    border: 1px solid #aaa;
     box-shadow: 1px 3px 3px var(--nine-gray);
 }
 
@@ -162,7 +114,6 @@ button#dropdownMenuButton1 {
 .infoCard__input--textarea:focus-visible {
     outline: none;
 }
-
 
 .selectDiv {
     position: relative;
@@ -181,7 +132,7 @@ button#dropdownMenuButton1 {
     height: 32px;
     width: 32px;
     background: #8faadc;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-size: 24px;
     padding: 4px;
@@ -195,14 +146,14 @@ button#dropdownMenuButton1 {
 }
 
 .contactBtn {
-    padding: .15rem 2rem;
-    color: #FFF;
+    padding: 0.15rem 2rem;
+    color: #fff;
     font-size: 20px;
     background-color: #8faadc;
     border: none;
     border-radius: 6px;
     margin: 1rem auto;
-    transition: background-color .3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .contactBtn:hover {
@@ -220,4 +171,145 @@ button#dropdownMenuButton1 {
     .infoCard__input--textarea {
         width: 100%;
     }
+}
+
+/* menu */
+#list-tab {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.fa-solid.fa-gear {
+    color: #f5f5f5;
+}
+
+button#dropdownMenuButton1 {
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+}
+
+.blue1 {
+    background-color: #89a9e7 !important;
+}
+.blue2 {
+    background-color: #4483cb !important;
+}
+.blue3 {
+    background-color: #0072bf !important;
+}
+.blue4 {
+    background-color: #105ea9 !important;
+}
+.blue5 {
+    background-color: #003179 !important;
+}
+
+.list-group-item.list-group-item-action.active {
+    color: #f5f5f5;
+    background-color: #ffac28 !important;
+}
+
+header {
+    padding-bottom: 3rem;
+}
+.item-sub {
+    z-index: 100;
+    position: relative;
+}
+
+.header-item {
+    background-color: #003179;
+    border-bottom: 5px solid #89a9e7;
+    color: white;
+    height: 65px !important;
+}
+
+.item-users {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-client {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.linkWhite.m-2,
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.menu-hidden {
+    display: none;
+}
+
+@media (max-width: 915px) {
+    .image-telcel {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-nav {
+        display: none;
+    }
+
+    #list-tab {
+        flex-direction: column;
+    }
+    .menu-hidden {
+        display: block;
+        color: #000;
+        display: flex;
+        align-items: center;
+    }
+    .infoCard {
+        margin-top: 8rem;
+    }
+    .linkWhite.m-2 > a,
+    i.fa-solid.fa-circle-user.fa-2x,
+    .fa-solid.fa-gear {
+        color: #003179 !important;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 650px) {
+    #list-tab {
+        flex-wrap: wrap;
+    }
+}
+
+.list-group-item.active,
+.list-group-item {
+    border: none !important;
+    padding: 0 !important;
+    color: #f5f5f5 !important;
+}
+
+#list-tab > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#list-tab > a:hover {
+    background-color: #ffac28 !important;
+}
+
+.linkWhite.m-2 > a,
+i.fa-solid.fa-circle-user.fa-2x {
+    color: #f5f5f5;
+    text-decoration: none;
 }
