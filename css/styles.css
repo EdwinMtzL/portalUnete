@@ -58,8 +58,12 @@
     box-shadow: 0px 3px 5px var(--nine-gray);
 }
 
+.infoCard__content--noBorder {
+    padding: 1rem 2rem;
+}
+
 .infoCard__label {
-    min-width: 15%;
+    min-width: 20%;
     color: var(--nine-gray);
 }
 
