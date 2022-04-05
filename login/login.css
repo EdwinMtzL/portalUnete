@@ -48,6 +48,8 @@ main.container {
 }
 
 .inputField input::placeholder,
+.inputField input:-ms-input-placeholder,
+.inputField input:-moz-placeholder,
 .inputField input::-moz-placeholder,
 .inputField input::-webkit-input-placeholder {
     color: #96989b;
@@ -110,6 +112,15 @@ main.container {
     background-color: rgba(43,79,168,.5);
 }
 
+.g-recaptcha {
+	width: 80%;
+	height: auto;
+	margin: 0 auto 1.5rem;
+}
+
+.g-recaptcha iframe {
+	transform: scale(0.90);
+} 
 
 @media (max-width: 767.98px) {
     main.container {
