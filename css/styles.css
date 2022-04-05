@@ -59,7 +59,7 @@
 }
 
 .infoCard__content--noBorder {
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
 .infoCard__label {
@@ -126,6 +126,41 @@
 
 .contactBtn:hover {
     background-color: #5b9bd5;
+}
+
+.infoCard .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    padding-right: 20%;
+    padding-left: 15%;
+    font-size: .85rem;
+    background-color: #0007;
+}
+
+.infoCard .card-img-overlay h5 {
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.infoCard .card-img-overlay p {
+    font-size: .85rem;
+    margin-bottom: 0;
+}
+
+.infoCard .card-img-overlay a.btn {
+    max-width: 50%;
+    padding: 0.125rem;
+    font-size: .85rem;
+}
+
+.infoCard .card {
+    border: none;
+}
+
+.infoCard .card-img {
+    height: 100%;
 }
 
 @media (max-width: 575.98px) {
