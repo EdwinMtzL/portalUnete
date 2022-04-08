@@ -165,18 +165,7 @@ body {
     background-color: #5b9bd5;
 }
 
-@media (max-width: 575.98px) {
-    .hexagonBorder {
-        display: none;
-    }
-}
 
-@media (max-width: 767.98px) {
-    .infoCard__input,
-    .infoCard__input--textarea {
-        width: 100%;
-    }
-}
 
 /* menu */
 #list-tab {
@@ -228,17 +217,14 @@ header {
     background-color: #003179;
     border-bottom: 5px solid #89a9e7;
     color: white;
-    height: 65px !important;
+    height: 65px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .item-users {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-.header-item {
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -257,43 +243,6 @@ header {
 
 .menu-hidden {
     display: none;
-}
-
-@media (max-width: 915px) {
-    .image-telcel {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .item-nav {
-        display: none;
-    }
-
-    #list-tab {
-        flex-direction: column;
-    }
-    .menu-hidden {
-        display: block;
-        color: #000;
-        display: flex;
-        align-items: center;
-    }
-    .infoCard {
-        margin-top: 8rem;
-    }
-    .linkWhite.m-2 > a,
-    i.fa-solid.fa-circle-user.fa-2x,
-    .fa-solid.fa-gear {
-        color: #003179 !important;
-        text-decoration: none;
-    }
-}
-
-@media (max-width: 650px) {
-    #list-tab {
-        flex-wrap: wrap;
-    }
 }
 
 .list-group-item.active,
@@ -348,4 +297,63 @@ i.fa-solid.fa-circle-user.fa-2x {
     background-size: cover;
     height: auto;
     max-width: 100%;
+}
+
+@media (max-width: 915px) {
+    .image-telcel {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .infoCard__input,
+    .infoCard__input--textarea {
+        width: 100%;
+    }
+    .infoCard {
+        margin-top: 8rem;
+    }
+    
+    .header-item {
+        height: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+    #list-tab {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hexagonBorder {
+        display: none;
+    }
+    .linkWhite.m-2 > a,
+    i.fa-solid.fa-circle-user.fa-2x,
+    .fa-solid.fa-gear {
+        color: #003179 !important;
+        text-decoration: none;
+    }
+    #list-tab {
+        flex-direction: column;
+    }
+    .item-nav {
+        display: none;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }    
+    .menu-hidden {
+        display: block;
+        color: #003179;
+        display: flex;
+        align-items: center;
+    }
+    .header-item {
+        height: 160px;
+    }
+    .list-group-item.active,
+    .list-group-item {
+        padding: .5rem 0 !important;
+    }
 }
