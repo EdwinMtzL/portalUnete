@@ -242,6 +242,20 @@
     color: #FFF;
 }
 
+.text-privacidad {
+    color: var(--nine-gray);
+}
+
+.text-multicolor span:nth-child(odd) {
+    color: #0072bd;
+    font-weight: bold;
+}
+
+.text-multicolor span:nth-child(even) {
+    color: #ffaa28 ;
+    font-weight: bold;
+}
+
 @media (max-width: 575.98px) {
     .hexagonBorder,
     .hexagonBorder--knowmore,
