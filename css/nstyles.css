@@ -18,143 +18,6 @@ body {
     flex-wrap: wrap;
 }
 
-:root {
-    --nine-gray: #999;
-}
-
-.infoCard {
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-}
-
-.infoCard__title {
-    background-color: #8faadc;
-    border-radius: 15px;
-    position: relative;
-    padding: 0.5rem 1rem 0.75rem 1rem;
-    box-shadow: 5px 2px 3px var(--nine-gray);
-}
-
-.infoCard__h1 {
-    margin-bottom: 0;
-    color: #fff;
-    border-left: 4px solid #fff;
-    padding-left: 1rem;
-}
-
-.hexagonBorder {
-    position: absolute;
-    right: -49px;
-    top: -10px;
-    background-color: #5b9bd5;
-    height: 88px;
-    width: 98px;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    box-shadow: 5px 2px 3px var(--nine-gray);
-}
-
-.hexagon {
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    background-color: #fff;
-    height: 82px;
-    width: 92px;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-.hexagon__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.infoCard__content {
-    width: calc(100% - 2rem);
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    border-top: none;
-    border-radius: 0 0 3rem 3rem;
-    box-shadow: 0px 3px 5px var(--nine-gray);
-}
-
-.infoCard__label {
-    min-width: 15%;
-    color: var(--nine-gray);
-}
-
-.infoCard__input,
-.infoCard__input--textarea {
-    height: 32px;
-    width: 300px;
-    padding-left: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #aaa;
-    box-shadow: 1px 3px 3px var(--nine-gray);
-}
-
-.infoCard__input:focus-visible,
-.infoCard__input--textarea:focus-visible {
-    outline: none;
-}
-
-.selectDiv {
-    position: relative;
-    display: inline;
-}
-
-.selectDiv select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-}
-
-.selectDiv i {
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    background: #8faadc;
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    padding: 4px;
-    border-radius: 6px;
-    right: 0px;
-    z-index: -1;
-}
-
-.infoCard__input--textarea {
-    height: 64px;
-}
-
-.contactBtn {
-    padding: 0.15rem 2rem;
-    color: #fff;
-    font-size: 20px;
-    background-color: #8faadc;
-    border: none;
-    border-radius: 6px;
-    margin: 1rem auto;
-    transition: background-color 0.3s ease;
-}
-
-.contactBtn:hover {
-    background-color: #5b9bd5;
-}
-
-@media (max-width: 575.98px) {
-    .hexagonBorder {
-        display: none;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .infoCard__input,
-    .infoCard__input--textarea {
-        width: 100%;
-    }
-}
 
 /* menu */
 #list-tab {
@@ -219,12 +82,12 @@ header {
 
 .item-users {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
-.header-item {
+.item-users {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -293,6 +156,12 @@ header {
     #list-tab {
         flex-wrap: wrap;
     }
+}
+.list-group-item.active,
+.list-group-item {
+    border: none !important;
+    padding: 0 !important;
+    color: #f5f5f5 !important;
 }
 
 .list-group-item.active,
@@ -477,4 +346,54 @@ footer {
     display: none;
     transition-property: opacity, left, top, height;
     transition-duration: 3s, 5s;
+    max-width: 812px;
+    border-radius: var(--border-radius-primary);
+}
+
+@media (max-width: 915px) {
+    .image-telcel {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header-item {
+        height: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+    #list-tab {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .linkWhite.m-2 > a,
+    i.fa-solid.fa-circle-user.fa-2x,
+    .fa-solid.fa-gear {
+        color: #003179 !important;
+        text-decoration: none;
+    }
+    #list-tab {
+        flex-direction: column;
+    }
+    .item-nav {
+        display: none;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }    
+    .menu-hidden {
+        display: block;
+        color: #003179;
+        display: flex;
+        align-items: center;
+    }
+    .header-item {
+        height: 160px;
+    }
+    .list-group-item.active,
+    .list-group-item {
+        padding: .5rem 0 !important;
+    }
 }

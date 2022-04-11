@@ -116,9 +116,7 @@
             );
             $(".emailtoSend").html("E-mail");
             $("#TryitAgain").html("Entrar tente novamente");
-            $(
-              ".sendRecoveryData"
-            ).val("Envie informação");
+            $(".sendRecoveryData").val("Envie informação");
             break;
           case "pt":
             $(".userNameField").attr("placeholder", "Usuário:");
@@ -129,9 +127,7 @@
             );
             $(".emailtoSend").html("E-mail");
             $("#TryitAgain").html("Entrar tente novamente");
-            $(
-              ".sendRecoveryData"
-            ).val("Envie informação");
+            $(".sendRecoveryData").val("Envie informação");
             break;
           default:
             $(".userNameField").attr("placeholder", "Usuario:");
@@ -142,9 +138,7 @@
             );
             $(".emailtoSend").attr("placeholder", "E-mail");
             $("#TryitAgain").html("Intentar Login nuevamente");
-            $(
-              ".sendRecoveryData"
-            ).val("Enviar datos");
+            $(".sendRecoveryData").val("Enviar datos");
             break;
         }
       }
@@ -182,35 +176,66 @@
               src="https://unete.mentortm.com/images/home/logo_unete.png"
               alt="Logo Unete"
             />
-            <p class="failureLogin"></p>
+            <p class="failureLogin">
+              <asp:Literal id="FailureText" runat="server"></asp:Literal>
+            </p>
             <p class="inputField">
               <i class="fas fa-user col-2"></i>
-              <input
+              <!-- <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Usuario"
                 class="col regexValid userNameField"
-              />
+              /> -->
+              <asp:TextBox
+                id="UserName"
+                runat="server"
+                CssClass="col regexValid userNameField"
+                placeholder="Usuario"
+              ></asp:TextBox>
+              <!--<asp:RequiredFieldValidator runat="server" id="reqName" controltovalidate="UserName" Display="Dynamic" errormessage="*"/>-->
             </p>
             <p class="inputField">
               <i class="fas fa-lock col-2"></i>
-              <input
+              <!-- <input
                 name=""
                 type="password"
                 id=""
                 placeholder="Contraseña"
                 class="col regexValid passwordField"
-              />
+              /> -->
+              <asp:TextBox
+                id="Password"
+                runat="server"
+                textMode="Password"
+                CssClass="col regexValid passwordField"
+                placeholder="Contraseña"
+              ></asp:TextBox>
+              <!--<asp:RequiredFieldValidator runat="server" id="reqName2" controltovalidate="Password" Display="Dynamic" errormessage="*"/>-->
             </p>
 
-            <div
-              class="g-recaptcha"
-              data-sitekey="6Lcqv1kaAAAAAPIh-cmurme3Gxu7jsApoUmHDYML"
-            ></div>
+            <div>
+              <!--k: 6LekoZIUAAAAAI4WHvytfnnLiasNyD-x6BpLkk2O-->
+              <!--sk: 6LekoZIUAAAAAG3VYWD1GFqSYmu-q5qiRQw0ngcM-->
+              <asp:RecaptchaV2Control
+                ID="gRecaptcha"
+                data-callback="recaptchaCallback"
+                SiteKey="6Lcqv1kaAAAAAPIh-cmurme3Gxu7jsApoUmHDYML"
+                SecretKey="6Lcqv1kaAAAAAFlaqpc6X4U7Y5r0fEfOpwdV3HhE"
+                runat="server"
+              />
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
 
             <p class="loginBtn">
-              <input type="submit" name="" value="Entrar" id="" />
+              <!-- <input type="submit" name="" value="Entrar" id="" /> -->
+              <asp:button
+                id="Login"
+                runat="server"
+                Text="Login"
+                onclick="Login_Click"
+              ></asp:button>
             </p>
 
             <p class="forgotPass">
@@ -231,32 +256,50 @@
             </p>
             <p class="inputField">
               <i class="fas fa-user col-2"></i>
-              <input
+              <!-- <input
                 name=""
                 type="text"
                 id=""
                 placeholder="Usuario"
                 class="col regexValid userNameField"
-              />
+              /> -->
+              <asp:TextBox
+                id="RecoverLogin"
+                runat="server"
+                placeholder="Usuario"
+                CssClass="col regexValid userNameField"
+              ></asp:TextBox>
             </p>
             <p class="inputField">
               <i class="fas fa-envelope col-2"></i>
-              <input
+              <!-- <input
                 name=""
                 type="text"
                 id=""
                 placeholder="E-mail"
                 class="col emailtoSend"
-              />
+              /> -->
+              <asp:TextBox
+                id="RecoverMail"
+                runat="server"
+                placeholder="E-mail"
+                CssClass="col emailtoSend"
+              ></asp:TextBox>
             </p>
             <p class="loginBtn">
-              <input
+              <!-- <input
                 type="submit"
                 name=""
                 value="Enviar datos"
                 onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ContentPlaceHolderDefault$PruebasLoginTelcel_1$recoverMyPasswordButton", "", true, "", "", false, false))'
                 id=""
                 class="sendRecoveryData"
+              /> -->
+              <asp:Button
+                ID="recoverMyPasswordButton"
+                runat="server"
+                Text="Enviar datos"
+                onclick="recoverMyPasswordButton_Click"
               />
             </p>
             <p class="forgotPass">

@@ -1,5 +1,6 @@
 :root {
     --nine-gray: #999;
+    --border-radius-primary: 6px;
 }
 
 .infoCard {
@@ -7,12 +8,31 @@
     margin-bottom: 1rem;
 }
 
-.infoCard__title {
+.infoCard__title,
+.infoCard__title--news,
+.infoCard__title--knowmore {
     background-color: #8faadc;
     border-radius: 15px;
     position: relative;
     padding: 0.5rem 1rem 0.75rem 1rem;
     box-shadow: 5px 2px 3px var(--nine-gray);
+}
+
+.infoCard__title--news {
+    background-color: #2f5597;
+}
+
+.infoCard__title--news .infocard__h1 {
+    border-left-color: #97d2ff;
+}
+
+.infoCard__title--knowmore {
+    background-color: #ffe699;
+}
+
+.infoCard__title--knowmore .infoCard__h1 {
+    color: #022E80BB;
+    border-left: 4px solid #022E80BB;
 }
 
 .infoCard__h1 {
@@ -22,7 +42,9 @@
     padding-left: 1rem;
 }
 
-.hexagonBorder {
+.hexagonBorder,
+.hexagonBorder--knowmore,
+.hexagonBorder--news {
     position: absolute;
     right: -49px;
     top: -10px;
@@ -33,6 +55,13 @@
     box-shadow: 5px 2px 3px var(--nine-gray);
 }
 
+.hexagonBorder--knowmore {
+    background-color: #ffc721;
+}
+.hexagonBorder--news {
+    background-color: #2f5597;
+}
+
 .hexagon {
     position: absolute;
     right: 3px;
@@ -41,11 +70,14 @@
     height: 82px;
     width: 92px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hexagon__img {
-    width: 100%;
-    height: 100%;
+    max-width: 65%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -55,11 +87,16 @@
     padding: 1rem 2rem;
     border-top: none;
     border-radius: 0 0 3rem 3rem;
+    background-color: #FFF9;
     box-shadow: 0px 3px 5px var(--nine-gray);
 }
 
+.infoCard__content--noBorder {
+    padding: 1rem 3rem;
+}
+
 .infoCard__label {
-    min-width: 15%;
+    min-width: 20%;
     color: var(--nine-gray);
 }
 
@@ -124,9 +161,109 @@
     background-color: #5b9bd5;
 }
 
+.infoCard .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    padding-right: 20%;
+    padding-left: 15%;
+    font-size: .85rem;
+    /* background-color: #0007; */
+}
+
+.infoCard .card-img-overlay h5 {
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.infoCard .card-img-overlay p {
+    font-size: .85rem;
+    margin-bottom: 0;
+}
+
+.infoCard .card-img-overlay a.btn {
+    max-width: 50%;
+    padding: 0.125rem;
+    font-size: .85rem;
+}
+
+.infoCard .card {
+    border: none;
+    background-color: transparent;
+    /* overflow: hidden; */
+}
+
+.infoCard .card-img {
+    height: 100%;
+    border-radius: var(--border-radius-primary);
+}
+
+.infoCard .img-filter {
+    width: calc(100% - 1.5rem);
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #0007;
+    border-radius: var(--border-radius-primary);
+}
+
+.knowmore__brandTitle {
+    text-align: right;
+    border-top-right-radius: var(--border-radius-primary);
+    border-top-left-radius: var(--border-radius-primary);
+    background-color: #CFCFCFAA;
+}
+
+.knowmore__contentImg {
+    border-bottom-right-radius: var(--border-radius-primary);
+    border-bottom-left-radius: var(--border-radius-primary);
+}
+
+.infoCard .carousel-indicators {
+    position: relative;
+}
+
+.infoCard .carousel-indicators [data-bs-target] {
+    height: 30px;
+    width: 30px;
+    text-indent: unset;
+    font-size: 1.25rem;
+    color: #022E80;
+    font-weight: bold;
+    background-color: unset;
+    border-radius: 50%;
+    border: 3px solid #022E80;
+    opacity: 1;
+}
+
+.infoCard .carousel-indicators .active {
+    background-color: #022E80;
+    color: #FFF;
+}
+
+.text-privacidad {
+    color: var(--nine-gray);
+}
+
+.text-multicolor span:nth-child(odd) {
+    color: #0072bd;
+    font-weight: bold;
+}
+
+.text-multicolor span:nth-child(even) {
+    color: #ffaa28 ;
+    font-weight: bold;
+}
+
 @media (max-width: 575.98px) {
-    .hexagonBorder {
+    .hexagonBorder,
+    .hexagonBorder--knowmore,
+    .hexagonBorder--news {
         display: none;
+    }
+    .infoCard__content--noBorder {
+        padding: 1rem 2rem;
     }
 }
 
@@ -134,5 +271,12 @@
     .infoCard__input,
     .infoCard__input--textarea {
         width: 100%;
+    }
+    .infoCard__content--noBorder {
+        padding: 1rem;
+    }
+    .infoCard .card-img-overlay {
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 }
