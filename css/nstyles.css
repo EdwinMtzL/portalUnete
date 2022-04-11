@@ -170,7 +170,8 @@ i.fa-solid.fa-circle-user.fa-2x {
     background-position: center;
     background-size: cover;
     height: auto;
-    max-width: 100%;
+    max-width: 812px;
+    border-radius: var(--border-radius-primary);
 }
 
 @media (max-width: 915px) {
