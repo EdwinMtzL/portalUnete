@@ -4,8 +4,7 @@
 }
 
 .infoCard {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .infoCard__title,
@@ -227,6 +226,8 @@
 .infoCard .carousel-indicators [data-bs-target] {
     height: 30px;
     width: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
     text-indent: unset;
     font-size: 1.25rem;
     color: #022E80;
@@ -235,6 +236,11 @@
     border-radius: 50%;
     border: 3px solid #022E80;
     opacity: 1;
+}
+
+.infoCard .carousel-indicators.--small-indicators [data-bs-target] {
+    width: 18px;
+    height: 18px;
 }
 
 .infoCard .carousel-indicators .active {
@@ -264,6 +270,9 @@
     }
     .infoCard__content--noBorder {
         padding: 1rem 2rem;
+    }
+    .infoCard {
+        margin-top: 2rem;
     }
 }
 

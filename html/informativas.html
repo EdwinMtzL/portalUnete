@@ -127,28 +127,28 @@
                 <div class="col-md-12 item-nav">
                     <div class="list-group" id="list-tab" role="tablist" id="MenuHs">
                         <a class="blue1 list-group-item list-group-item-action active" id="list-home-list"
-                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home" onclick="omg()">Inicio
+                            data-bs-toggle="list" href="#home" role="tab" aria-controls="list-home" onclick="omg()">Inicio
                         </a>
                         <a class="blue2 list-group-item list-group-item-action" id="list-unete-list"
-                            data-bs-toggle="list" href="#list-unete" role="tab" aria-controls="list-unete" onclick="hiddenItem()">¿Qué es
+                            data-bs-toggle="list" href="#unete" role="tab" aria-controls="list-unete" onclick="hiddenItem()">¿Qué es
                             UNETE?
                         </a>
                         <a class="blue3 list-group-item list-group-item-action" id="list-mision-list"
-                            data-bs-toggle="list" href="#list-mision" role="tab" aria-controls="list-mision" onclick="hiddenItem()">Misión
+                            data-bs-toggle="list" href="#mision" role="tab" aria-controls="list-mision" onclick="hiddenItem()">Misión
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-vision-list"
-                            data-bs-toggle="list" href="#list-vision" role="tab" aria-controls="list-vision" onclick="hiddenItem()">Visión
+                            data-bs-toggle="list" href="#vision" role="tab" aria-controls="list-vision" onclick="hiddenItem()">Visión
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-message-list"
-                            data-bs-toggle="list" href="#list-message" role="tab" aria-controls="list-message" onclick="hiddenItem()">Mensaje
+                            data-bs-toggle="list" href="#message" role="tab" aria-controls="list-message" onclick="hiddenItem()">Mensaje
                             de bienvenida
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-question-list"
-                            data-bs-toggle="list" href="#list-question" role="tab"
+                            data-bs-toggle="list" href="#question" role="tab"
                             aria-controls="list-question" onclick="hiddenItem()">Preguntas frecuentes
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-contacto-list"
-                            data-bs-toggle="list" href="#list-contacto" role="tab" aria-controls="list-contac" onclick="hiddenItem()">Contacto
+                            data-bs-toggle="list" href="#contact" role="tab" aria-controls="list-contac" onclick="hiddenItem()">Contacto
                         </a>
                         <!-- <a class="image-telcel"> -->
                         <!-- <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogo.png"
@@ -160,17 +160,14 @@
         </div>
     </header>
       
-      <div  class="container">
+    <div  class="container">
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home">
             <div id="content" class="row-fluid mb-3">
               <div class="infoCard">
                 <div class="infoCard__content--noBorder">
                   <div class="carousel slide  carousel-fade" id="carouselControls" data-bs-ride="carousel">
-                    <div class="carousel-controls">
-                        <a class="play" href="#" role="button"><i class="fa-solid fa-play"></i></a>
-                        <a class="pause" href="#" role="button"><i class="fa-solid fa-pause"></i></a>
-                    </div>
+                    
                     <div class="carousel-inner">
                         <div class="carousel-item text-center active">
                             <img src="/images/banner_carrusel/banner central_812x453.jpg" class="img-carousel">
@@ -197,17 +194,24 @@
                             <span class="visually-hidden">Next</span>
                         </a>
                     </div>
-                    <div class="carousel-indicators mt-3">
-                      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0"
-                          class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1"
-                          aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2"
-                          aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3"
-                          aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="4"
-                          aria-label="Slide 5"></button>
+                    
+                    <div class="carousel-controls">
+                      <div class="carousel-indicators --small-indicators m-0 ps-3">
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                      </div>
+                      <div class="">
+                        <a class="play" href="#" role="button"><i class="fa-solid fa-play"></i></a>
+                        <a class="pause" href="#" role="button"><i class="fa-solid fa-pause"></i></a>
+                      </div>
                   </div>
                   </div>
                 </div>
@@ -399,6 +403,7 @@
             </div>
           </div> 
           
+          <!-- Qué es Unete -->
           <div class="infoCard tab-pane fade show" id="unete" role="tabpanel" aria-labelledby="unete">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">¿Qué es Unete?</h1>
@@ -420,6 +425,7 @@
             </div>
           </div>          
           
+          <!-- Misión -->
           <div class="infoCard tab-pane fade" id="mision" role="tabpanel" aria-labelledby="mision">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Misión</h1>
@@ -439,6 +445,7 @@
             </div>
           </div>
           
+          <!-- Visión -->
           <div class="infoCard tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vision">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Visión</h1>
@@ -458,6 +465,7 @@
             </div>
           </div>
 
+          <!-- Bienvenida -->
           <div class="infoCard tab-pane fade" id="message" role="tabpanel" aria-labelledby="message">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Mensaje de Bienvenida</h1>
@@ -484,6 +492,129 @@
             </div>
           </div>
 
+          <!-- Preguntas frecuentes -->
+          <div class="tab-pane fade" id="question" role="tabpanel" aria-labelledby="question">
+            <div class="infoCard">
+                <div class="infoCard__title">
+                    <h1 class="infoCard__h1">Preguntas Frecuentes</h1>
+                    <div class="hexagonBorder">
+                        <div class="hexagon">
+                            <img src="/images/secciones/Logo_UNETE.png"
+                                alt="" class="hexagon__img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="infoCard__content row justify-content-between">
+                    <div class="infoCard__image col-sm-8 col-md-6 mx-auto mx-md-0">
+                        <img src="/images/Preguntas frecuentes.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="infoCard__data col-md-6">
+                        <div class="form">
+                            <form class="d-flex p-4">
+                                <input class="form-control me-2" type="search"
+                                    placeholder="Ingresa tu pregunta o palabra clave" aria-label="Search">
+                                <button class="btn btn-primary" type="submit"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <div></div>
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by
+                                        default,
+                                        until the collapse plugin adds the appropriate classes that we use to
+                                        style
+                                        each
+                                        element. These classes control the overall appearance, as well as the
+                                        showing and
+                                        hiding via CSS transitions. You can modify any of this with custom CSS
+                                        or
+                                        overriding
+                                        our default variables. It's also worth noting that just about any HTML
+                                        can
+                                        go within
+                                        the <code>.accordion-body</code>, though the transition does limit
+                                        overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden
+                                        by
+                                        default,
+                                        until the collapse plugin adds the appropriate classes that we use to
+                                        style
+                                        each
+                                        element. These classes control the overall appearance, as well as the
+                                        showing and
+                                        hiding via CSS transitions. You can modify any of this with custom CSS
+                                        or
+                                        overriding
+                                        our default variables. It's also worth noting that just about any HTML
+                                        can
+                                        go within
+                                        the <code>.accordion-body</code>, though the transition does limit
+                                        overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden
+                                        by
+                                        default,
+                                        until the collapse plugin adds the appropriate classes that we use to
+                                        style
+                                        each
+                                        element. These classes control the overall appearance, as well as the
+                                        showing and
+                                        hiding via CSS transitions. You can modify any of this with custom CSS
+                                        or
+                                        overriding
+                                        our default variables. It's also worth noting that just about any HTML
+                                        can
+                                        go within
+                                        the <code>.accordion-body</code>, though the transition does limit
+                                        overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Contacto -->
           <div class="infoCard tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Contacto</h1>
@@ -541,7 +672,7 @@
                       class="infoCard__input--textarea"
                     ></textarea>
                   </div>
-                  <p class="text-center mb-0">
+                  <p class="text-center mb-0 me-4">
                     <input type="submit" value="Enviar" class="contactBtn" />
                   </p>
                 </form>
@@ -549,6 +680,7 @@
             </div>
           </div>
 
+          <!-- Aviso de privacidad -->
           <div class="infoCard tab-pane fade" id="privacidad" role="tabpanel" aria-labelledby="privacidad">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Aviso de privacidad</h1>
@@ -569,6 +701,97 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <div id="FooterWidgets" class="container">
+          <!-- <div class="row-fluid">
+              <div class="pane span3">
+                  <asp:contentplaceholder id="F1_Zone25_1" runat="server" />
+              </div>
+              <div class="pane span3">
+                  <asp:contentplaceholder id="F1_Zone25_2" runat="server" />
+              </div>
+              <div class="pane span3">
+                  <asp:contentplaceholder id="F1_Zone25_3" runat="server" />
+              </div>
+              <div class="pane span3">
+                  <asp:contentplaceholder id="F1_Zone25_4" runat="server" />
+              </div>
+          </div> -->
+          <div class="row-fluid hidden-tablet hidden-desktop">
+
+              <div class="pane span9">
+                  <p>
+                      <a href="http://www.telcel.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoTel.png" />
+                      </a>
+                      <a href="http://deur.tuplan.mx" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoTuplan.png" />
+                      </a>
+                      <a href="http://mitelcel.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoMi.png" />ƒ
+                      </a>
+                      <a href="http://holatelcel.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoHola.png" />
+                      </a>
+                      <a href="http://clarovideo.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoVideo.png" />
+                      </a>
+                      <a href="images/home/Archivos/Manual.pdf" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoClaro.png" />
+                      </a>
+                      <a href="http://aprende.org" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoApprende.png" />
+                      </a>
+                  </p>
+              </div>
+              <div class="pane span3" style="text-align:center;">
+                  <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" /></p>
+                  <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
+              </div>
+          </div>
+          <div class="row-fluid hidden-phone">
+              <div class="pane span4">
+                  <asp:contentplaceholder id="F3_Zone50_1" runat="server" />
+                  <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" /></p>
+                  <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
+                  <p><a href="/1143">Aviso de Privacidad</a></p>
+              </div>
+              <div class="pane span8">
+                  <p>
+                      <a href="https://unete.mentortm.com/media/27547/formato-solicitud-de-ingreso-caja-de-ahorro-servicios-contractuales.pdf"
+                          target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoTel.png" />
+                      </a>
+                      <a href="https://unete.mentortm.com/media/27548/9efbd0d46bd76b29f354f1409d595be8-icono-de-nota-adhesiva-dibujada-a-mano.png"
+                          target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoTuplan.png" />
+                      </a>
+                      <a href="http://mitelcel.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoMi.png" />
+                      </a>
+                      <a href="http://holatelcel.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoHola.png" />
+                      </a>
+                      <a href="http://clarovideo.com" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoVideo.png" />
+                      </a>
+                      <a href="https://unete.mentortm.comimages/home/Archivos/Manual.pdf" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoClaro.png" />
+                      </a>
+                      <a href="http://aprende.org" target="_blank">
+                          <img src="https://unete.mentortm.com/images/home/logoApprende.png" />
+                      </a>
+                  </p>
+              </div>
+          </div>
+          <div class="row-fluid">
+              <div class="pane span12">
+                  <asp:contentplaceholder id="F4_Zone100" runat="server" />
+              </div>
+          </div>
+      </div>
+    </footer>
 
     <script>
       const hiddenMenu = () => {
