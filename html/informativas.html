@@ -47,6 +47,120 @@
 <body>
     <div id="wrapper">
       <header>
+        <div class="header-item">
+            <div class="col-md-3 col-sm-12 image-client">
+                <a href="https://capacitacion.telcelinstitucional.com">
+                    <img alt="Logo" src="https://unete.mentortm.com/images/home/unete.png" class="img-fluid l-telcel" />
+                </a>
+                <div class="col-6 d-none d-sm-flex d-md-none justify-content-end">
+                    <div class="linkWhite m-2">
+                        <a href="http://devtelcelunete.mentortm.com">Mi cuenta</a>
+                    </div>
+                    <div class="m-2">
+                        <a href="https://devtelcelunete.mentortm.com">
+                            <i class="fa-solid fa-circle-user fa-2x"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-hidden" onclick="hiddenMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 item-sub px-3 px-md-0">
+                <div class="item-users col-md-12">
+                    <div class="col-md-6 col-sm-12">
+                        <form class="d-flex mt-2 mb-2">
+                            <input type="text" name="searchField" id="searchFieldHome"
+                                class="inputTextClass form-control me-2" placeholder="Búscar" aria-label="Search" />
+                            <!-- <a href="javascript:searchToMentorHome();"> -->
+                            <button class="btn btn-primary" onclick="`javascript:searchToMentorHome();`" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                            <!-- </a> -->
+                        </form>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 d-flex d-sm-none d-md-flex justify-content-end">
+                        <div class="linkWhite m-2">
+                            <a href="http://devtelcelunete.mentortm.com">Mi cuenta</a>
+                        </div>
+                        <div class="m-2">
+                            <a href="https://devtelcelunete.mentortm.com">
+                                <i class="fa-solid fa-circle-user fa-2x"></i>
+                            </a>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-hidden" onclick="hiddenMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+
+                        <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogoBlue.png"
+                            class="image-telcel" />
+
+                    </div>
+                </div>
+                <div class="col-md-12 item-nav">
+                    <div class="list-group" id="list-tab" role="tablist" id="MenuHs">
+                        <a class="blue1 list-group-item list-group-item-action active" id="list-home-list"
+                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home" onclick="omg()">Inicio
+                        </a>
+                        <a class="blue2 list-group-item list-group-item-action" id="list-unete-list"
+                            data-bs-toggle="list" href="#list-unete" role="tab" aria-controls="list-unete" onclick="hiddenItem()">¿Qué es
+                            UNETE?
+                        </a>
+                        <a class="blue3 list-group-item list-group-item-action" id="list-mision-list"
+                            data-bs-toggle="list" href="#list-mision" role="tab" aria-controls="list-mision" onclick="hiddenItem()">Misión
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-vision-list"
+                            data-bs-toggle="list" href="#list-vision" role="tab" aria-controls="list-vision" onclick="hiddenItem()">Visión
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-message-list"
+                            data-bs-toggle="list" href="#list-message" role="tab" aria-controls="list-message" onclick="hiddenItem()">Mensaje
+                            de bienvenida
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-question-list"
+                            data-bs-toggle="list" href="#list-question" role="tab"
+                            aria-controls="list-question" onclick="hiddenItem()">Preguntas frecuentes
+                        </a>
+                        <a class="blue4 list-group-item list-group-item-action" id="list-contacto-list"
+                            data-bs-toggle="list" href="#list-contacto" role="tab" aria-controls="list-contac" onclick="hiddenItem()">Contacto
+                        </a>
+                        <!-- <a class="image-telcel"> -->
+                        <!-- <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogo.png"
+                            class="image-telcel" /> -->
+                        <!-- </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+      
+      <header>
         <div class="header-item mb-3">
             <div class="col-md-3 col-sm-12 image-client row">
                 <a href="https://capacitacion.telcelinstitucional.com" class="col-12 col-sm-6 col-md-12">
@@ -156,7 +270,8 @@
                 </div>
             </div>
         </div>
-    </header>
+      </header>
+
 
 
       <div  class="container">
