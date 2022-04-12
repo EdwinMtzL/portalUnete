@@ -81,7 +81,7 @@ button#dropdownMenuButton1 {
     border-top-left-radius: inherit;
 }
 
-.list-group-item:last-child {
+.list-group-item.last {
     border-radius: 0px;
     border-top-right-radius: inherit;
 }
@@ -292,6 +292,9 @@ i.fa-solid.fa-play{
     padding-left: .5rem;
     margin-right: 38px;
     background-color: #62c0d5;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: var(--border-radius-primary);
 }
 
 .titles-dashboard .infoCard__h1 {

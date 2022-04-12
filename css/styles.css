@@ -94,6 +94,10 @@
     padding: 1rem 3rem;
 }
 
+.infoCard__data {
+    text-align: justify;
+}
+
 .infoCard__label {
     min-width: 20%;
     color: var(--nine-gray);
