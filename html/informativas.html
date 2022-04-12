@@ -48,7 +48,7 @@
     <div id="wrapper">
       <header>
         <div class="header-item">
-            <div class="col-md-3 col-sm-12 image-client">
+            <div class="col-md-3 col-12 image-client">
                 <a href="https://capacitacion.telcelinstitucional.com">
                     <img alt="Logo" src="https://unete.mentortm.com/images/home/unete.png" class="img-fluid l-telcel" />
                 </a>
@@ -125,30 +125,33 @@
                     </div>
                 </div>
                 <div class="col-md-12 item-nav">
-                    <div class="list-group" id="list-tab" role="tablist" id="MenuHs">
+                    <div class="list-group" id="list-tab" role="tablist">
                         <a class="blue1 list-group-item list-group-item-action active" id="list-home-list"
-                            data-bs-toggle="list" href="#home" role="tab" aria-controls="list-home" onclick="omg()">Inicio
+                            data-bs-toggle="list" href="#home" role="tab" aria-controls="list-home" onclick="hiddenMenu()">Inicio
                         </a>
                         <a class="blue2 list-group-item list-group-item-action" id="list-unete-list"
-                            data-bs-toggle="list" href="#unete" role="tab" aria-controls="list-unete" onclick="hiddenItem()">¿Qué es
+                            data-bs-toggle="list" href="#unete" role="tab" aria-controls="list-unete" onclick="hiddenMenu()">¿Qué es
                             UNETE?
                         </a>
                         <a class="blue3 list-group-item list-group-item-action" id="list-mision-list"
-                            data-bs-toggle="list" href="#mision" role="tab" aria-controls="list-mision" onclick="hiddenItem()">Misión
+                            data-bs-toggle="list" href="#mision" role="tab" aria-controls="list-mision" onclick="hiddenMenu()">Misión
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-vision-list"
-                            data-bs-toggle="list" href="#vision" role="tab" aria-controls="list-vision" onclick="hiddenItem()">Visión
+                            data-bs-toggle="list" href="#vision" role="tab" aria-controls="list-vision" onclick="hiddenMenu()">Visión
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-message-list"
-                            data-bs-toggle="list" href="#message" role="tab" aria-controls="list-message" onclick="hiddenItem()">Mensaje
+                            data-bs-toggle="list" href="#message" role="tab" aria-controls="list-message" onclick="hiddenMenu()">Mensaje
                             de bienvenida
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-question-list"
                             data-bs-toggle="list" href="#question" role="tab"
-                            aria-controls="list-question" onclick="hiddenItem()">Preguntas frecuentes
+                            aria-controls="list-question" onclick="hiddenMenu()">Preguntas frecuentes
                         </a>
                         <a class="blue4 list-group-item list-group-item-action" id="list-contacto-list"
-                            data-bs-toggle="list" href="#contact" role="tab" aria-controls="list-contac" onclick="hiddenItem()">Contacto
+                            data-bs-toggle="list" href="#contact" role="tab" aria-controls="list-contact" onclick="hiddenMenu()">Contacto
+                        </a>
+                        <a class="d-none" id="list-privacidad-list"
+                            data-bs-toggle="list" href="#privacidad" role="tab" aria-controls="list-privacidad" onclick="hiddenMenu()">Contacto
                         </a>
                         <!-- <a class="image-telcel"> -->
                         <!-- <img alt="Logo" src="https://unete.mentortm.com/images/home/telcelLogo.png"
@@ -162,8 +165,64 @@
       
     <div  class="container">
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home">
+          <section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home">
             <div id="content" class="row-fluid mb-3">
+              <div class="titles-dashboard">
+            
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Mi capacitación</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Mi Capacitacion Icono.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Biblioteca</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Biblioteca Icono.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Promociones</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Promociones.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Motorola</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Logo Motorola.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Huawei</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Logo Huawei.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="infoCard__title">
+                        <p class="infoCard__h1">Honor</p>
+                        <div class="hexagonBorderD">
+                            <div class="hexagonD">
+                                <img src="/images/Logo Honor.png" alt="" class="hexagon__img" />
+                            </div>
+                        </div>
+                    </div>
+              </div>
               <div class="infoCard">
                 <div class="infoCard__content--noBorder">
                   <div class="carousel slide  carousel-fade" id="carouselControls" data-bs-ride="carousel">
@@ -401,10 +460,10 @@
                     </div>
                 </div>
             </div>
-          </div> 
+          </section> 
           
           <!-- Qué es Unete -->
-          <div class="infoCard tab-pane fade show" id="unete" role="tabpanel" aria-labelledby="unete">
+          <section class="infoCard tab-pane fade show" id="unete" role="tabpanel" aria-labelledby="unete">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">¿Qué es Unete?</h1>
               <div class="hexagonBorder">
@@ -423,10 +482,10 @@
                   <h5><strong>¡Unete a esta iniciativa de Telcel, creada y pensada para tí!</strong></h5>
                 </div>
             </div>
-          </div>          
+          </section>          
           
           <!-- Misión -->
-          <div class="infoCard tab-pane fade" id="mision" role="tabpanel" aria-labelledby="mision">
+          <section class="infoCard tab-pane fade" id="mision" role="tabpanel" aria-labelledby="mision">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Misión</h1>
               <div class="hexagonBorder">
@@ -443,10 +502,10 @@
                     <p>Proveer un espacio donde nuestra fuerza de venta, en el momento que lo requiera, pueda adquirir de manera inmediate las herramientas y la información que necesita para desarrollar sus competencias e impulsar su labor de venta. Buscando su lealtad a la marca y permanencia con Telcel, a través de un contacto personalizado.</p>
                 </div>
             </div>
-          </div>
+          </section>
           
           <!-- Visión -->
-          <div class="infoCard tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vision">
+          <section class="infoCard tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vision">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Visión</h1>
               <div class="hexagonBorder">
@@ -463,10 +522,10 @@
                     <p>Buscamos la cercanía y el contacto personal con nuestro principal recurso humano, nuestra fuerza de ventas, en un espacio dedicado para ellos, donde encuentren todo lo necesario para ayudarlo a hacer más fácil su labor de venta, donde tendrá la libertad de decidir el momento y lugar para dedicarse a su desarrollo profesional. Orientándonos siempre a conseguir una relación estable y duradera.</p>
                 </div>
             </div>
-          </div>
+          </section>
 
           <!-- Bienvenida -->
-          <div class="infoCard tab-pane fade" id="message" role="tabpanel" aria-labelledby="message">
+          <section class="infoCard tab-pane fade" id="message" role="tabpanel" aria-labelledby="message">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Mensaje de Bienvenida</h1>
               <div class="hexagonBorder">
@@ -490,10 +549,10 @@
                     <p><strong>Director Ejecutivo de Unidades Regionales</strong></p>
                 </div>
             </div>
-          </div>
+          </section>
 
           <!-- Preguntas frecuentes -->
-          <div class="tab-pane fade" id="question" role="tabpanel" aria-labelledby="question">
+          <section class="tab-pane fade" id="question" role="tabpanel" aria-labelledby="question">
             <div class="infoCard">
                 <div class="infoCard__title">
                     <h1 class="infoCard__h1">Preguntas Frecuentes</h1>
@@ -612,10 +671,10 @@
                     </div>
                 </div>
             </div>
-          </div>
+          </section>
 
           <!-- Contacto -->
-          <div class="infoCard tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact">
+          <section class="infoCard tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Contacto</h1>
               <div class="hexagonBorder">
@@ -678,10 +737,10 @@
                 </form>
               </div>
             </div>
-          </div>
+          </section>
 
           <!-- Aviso de privacidad -->
-          <div class="infoCard tab-pane fade" id="privacidad" role="tabpanel" aria-labelledby="privacidad">
+          <section class="infoCard tab-pane fade" id="privacidad" role="tabpanel" aria-labelledby="privacidad">
             <div class="infoCard__title">
               <h1 class="infoCard__h1">Aviso de privacidad</h1>
               <div class="hexagonBorder">
@@ -695,10 +754,10 @@
                     <img src="/images/tarjetas/Aviso.png" alt="Aviso de privacidad" class="img-fluid">
                 </div>
                 <div class="infoCard__data col-md-8">
-                    <p class="text-privacidad">Le informamos que la información personal que usted proporcione en este portal no se encuentra comprendida dentro del ámbito de aplicación de la normatividad vigente de datos personales ya que la misma exvluye toda aquella información, relativa a personas morales, personas físicas en su calidad de comerciantes y/o profesionistas y/o, en su caso, información de personas físicas que prestan sus servicios para alguna persona moral o persona física con actividad empresarial y/o prestación de servicios para fines de representación del empleador o contratista.</p>
+                    <p>Le informamos que la información personal que usted proporcione en este portal no se encuentra comprendida dentro del ámbito de aplicación de la normatividad vigente de datos personales ya que la misma exvluye toda aquella información, relativa a personas morales, personas físicas en su calidad de comerciantes y/o profesionistas y/o, en su caso, información de personas físicas que prestan sus servicios para alguna persona moral o persona física con actividad empresarial y/o prestación de servicios para fines de representación del empleador o contratista.</p>
                 </div>
             </div>
-        </div>
+          </section>
       </div>
     </div>
 
@@ -746,16 +805,16 @@
                   </p>
               </div>
               <div class="pane span3" style="text-align:center;">
-                  <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" /></p>
-                  <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
+                <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" /></p>
+                <p class="text-light">©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
               </div>
           </div>
           <div class="row-fluid hidden-phone">
               <div class="pane span4">
                   <asp:contentplaceholder id="F3_Zone50_1" runat="server" />
                   <p><img src="https://unete.mentortm.com/images/home/telcelLogoBlue.png" /></p>
-                  <p>©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
-                  <p><a href="/1143">Aviso de Privacidad</a></p>
+                  <p class="text-light">©2016 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
+                  <button class="privBtn" onclick="privMenuClick()">Aviso de Privacidad</button>
               </div>
               <div class="pane span8">
                   <p>
@@ -812,6 +871,11 @@
               $(this).closest('.carousel').carousel('pause');
           });
       });
+
+      const privMenuClick = () => {
+        document.getElementById('list-privacidad-list').click();
+        hiddenMenu();
+      }
 
   </script>
 </body>
